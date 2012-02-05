@@ -1,0 +1,20 @@
+---
+layout: legacy-post
+title: Today in the Intertweets (Aug 19th Ed)
+wordpress_id: 1108
+wordpress_url: http://disclojure.org/?p=1108
+date: 2010-08-19 20:47:17.000000000 -07:00
+---
+Eventful day today :)
+
+<a href="http://clojure.blogspot.com/2010/08/clojure-12-release.html">Clojure 1.2 is out</a>, with a bunch of new features that many bloggers have already covered one way or another and that I'll try to compile in a single post one of these days. For a good overview of the new features, check <a href="http://fogus.me/static/preso/clj1.2+/">this presentation</a> by @fogus. <a href="http://github.com/clojure/clojure/blob/1.2.x/changes.txt">Here is the detailed list</a> of new features and all other changes.
+
+And as if there were not enough good news in the Clojure front today, there is also confirmation that there will be a Clojure conference this year. Named <a href="http://first.clojure-conj.org/">clojure-conj</a>, It will take place in Durham, North Carolina (that's in the USA) on October 22nd and 23rd.  If you are planning to go, please <a href="http://first.clojure-conj.org/">sign-up</a> so they know how many attendees to plan for. I will be going, so I hope you meet you all there.
+
+But other things happened today. Here is the list:
+<ul>
+	<li>Really digging @bradfordcross's clojure Infer ML library; think *nix utils &amp; pipes for ML tasks. (<a href="http://github.com/bradford/infer">here</a>, via @rjurney) -- This is WIP, but very promising. A library that lets you build your own Machine Learning system by hooking well-known -- and not-so-well-known -- learning algorithms. The beauty of the system is that it makes it very easy to connect algorithms.</li>
+	<li>Case-insensitive filesystems vs AOT-compiled Clojure (<a href="http://cemerick.com/2010/08/19/case-insensitive-filesystems-vs-aot-compiled-clojure/">here</a>, via @cemerick) -- A word of warning for those who compile Clojure code on file systems that are case-insensitive (OS X, I am looking at you!). Spoiler: if you created two functions, named MY-function and my-function, the compiler will write one over the other.</li>
+	<li>Hacker News should be renamed to Clojure News (via @vsedach) -- That's because Clojure rocks.</li>
+	<li>I hate to overshadow the #clojure 1.2 release, but I've released #midje 0.4.0 (features shown at #agile2010)(<a href="http://github.com/marick/Midje">here</a>, via @marick) -- Midje is a powerful testing framework for Clojure with emphasis in mocks, written by Brian Marick. This new version features a sweetened interface. <a href="http://github.com/marick/Midje/blob/master/examples/sweet-examples/basic/test/basic/core_test.clj">Here is a heavily commented example of this new sweet interface</a> (sweet indeed)</li>
+</ul>

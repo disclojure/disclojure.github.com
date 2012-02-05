@@ -1,0 +1,14 @@
+---
+layout: legacy-post
+title: Today in the Intertweets (Dec 7th Ed)
+wordpress_id: 354
+wordpress_url: http://disclojure.org/?p=354
+date: 2009-12-07 23:14:32.000000000 -08:00
+---
+<ul>
+	<li>Our #Clojure book has gone out for technical review. :O (via @fogus) -- this is a new book (no title yet) on Clojure by <a href="http://manning.com/">Manning</a>, by @fogus and @chrishouser. No date for the MEAP (early access) yet.</li>
+	<li>How 'bout a #clojure debug-repl? (<a href="http://groups.google.com/group/clojure/browse_thread/thread/8d77ad0da8d190c8">here</a> and <a href="http://georgejahad.com/clojure/debug-repl.html">here</a>, via @georgejahad) -- insert a REPL instead of a 'println' in your code in order to perform debugging. Neat!</li>
+	<li>Sweet #redis #clojure is powered by leiningen now (<a href="http://github.com/ragnard/redis-clojure">here</a>, via @dysinger) -- <a href="http://code.google.com/p/redis/">Redis</a> is a #nosql DB, and redis-clojure is just a Clojure wrapper for it. Another one down for Leiningen!</li>
+	<li>#Clojure - Now with full liveness tracking for all locals! (<a href="http://clojure-log.n01se.net/date/2009-12-07.html#i78">here</a>, via @fogus) -- <a href="http://github.com/richhickey/clojure/commit/76c8f45293987b80e3599535dd86482e1180661d">here</a> is the commit in the 'new' branch. This change prevents loops from holding on to local variables after the 'recur' by clearing those locals after their last use; that is, "if you're not using it, you aren't holding it" (@richhickey) . The lack of this feature has caused lots of headaches to many, spending long periods looking for the cause of memory leaks in loops. No more. Maybe a 1.2 feature though, it doesn't look like it is making it into 1.1 for now. Testers welcome!</li>
+	<li>oh look! <a href="http://web.mit.edu/newsoffice/2009/ai-overview.html">http://web.mit.edu/newsoffice/2009/ai-overview.html</a> - we should do this in clojure! let's build a clojure machine!!! (via @nicferrier) -- Let's do it!</li>
+</ul>

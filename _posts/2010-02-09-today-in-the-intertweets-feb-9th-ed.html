@@ -1,0 +1,14 @@
+---
+layout: legacy-post
+title: Today in the Intertweets (Feb 9th Ed)
+wordpress_id: 651
+wordpress_url: http://disclojure.org/?p=651
+date: 2010-02-09 23:40:44.000000000 -08:00
+---
+<ul>
+	<li>π in #Clojure: featuring lazy seqs, BigDecimal, thread local bindings and more! (<a href="http://combinate.us/2010/02/09/pi-in-clojure/">here</a>, via @tvachon) -- This article is about computing π with arbitrary precision. The article starts as a rather basic article about implementing a known algorithm in Clojure, but it quickly goes down the rabbit hole of precision and arithmetics in the JVM/Clojure world. A very interesting read since these issues can bite you any day!</li>
+	<li>rhickey: #Clojure was not built, and is not going to be built, by voting. (via @stuartsierra) -- Let's create a committee... no, an assembly, to discuss in which way we can bring consensus-based feature development into clojure. Maybe involve an ISO body? IEEE?. Kidding!</li>
+	<li>'case' has been introduced in #clojure 1.2.0 (<a href="http://github.com/richhickey/clojure/blob/master/src/clj/clojure/core.clj#L4609">here</a>, via @wmacgyver) -- Should be faster than 'cond' and 'condp'. Notice that the test clauses are not evaluated; they must be compile-time literals. Dispatch is constant-time (i.e. clauses are not considered sequentially).</li>
+	<li>"Welcome to the Machine": State monads in Clojure (<a href="http://brehaut.net/blog/2010/welcome_to_the_machine">here</a>, via @kicauan) -- You need to have some understanding of what monads are and how they work in order to follow this article fully. The article explores the State monad in a step by step way, building the necessary tools to manipulate monads along the way. It helped me solidify my not-so-deep understanding of monads.</li>
+	<li>Giving some background on gen-class of #clojure (<a href="http://kotka.de/blog/2010/02/gen-class_how_it_works_and_how_to_use_it.html">here</a>, via @kotarak) - This article explains how to generate Java classes from Clojure and explains the rationale behind the mechanics of creating these classes. Knowing this background will make it easier for you to create classes in Clojure.</li>
+</ul>

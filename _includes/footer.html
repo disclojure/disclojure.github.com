@@ -1,0 +1,56 @@
+
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="span8 offset2">
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p> Copyright &copy; 2012 Antoni Batchelli
+        </p>
+      </div>
+    </div>
+  </div>
+
+</footer>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+  function extlink(href) {
+  _gaq.push(['_trackEvent','extlink',href]);
+    return true;
+  };
+  (function(){
+    var links = document.getElementsByTagName('a');
+    var regex = new RegExp('^' + window.location.protocol + '//' + window.location.hostname);
+    for (var i = 0, linksLength = links.length; i < linksLength; i++) {
+      if ( ! links[i].href.match(regex) && links[i].href.substr(0,4) == "http") {
+         links[i].setAttribute( 'onClick', "extlink('" + links[i].href + "')");}}})();
+</script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        url = "http://{{ site.domain }}{{ post.url }}";
+        beforecounter = "";
+        aftercounter = "";
+        $.getJSON('http://api.tweetmeme.com/url_info.jsonc?url='+url+'&callback=?',
+            function(data) {
+                $('#twitter-count').append(beforecounter + data.story.url_count + aftercounter);
+        });
+    })
+    </script>
+<!-- disqus comments -->
+  <script type="text/javascript">
+    var disqus_shortname = 'disclojure';
+    var disqus_developer = 1; 
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    <!-- comment count -->
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+  </script>

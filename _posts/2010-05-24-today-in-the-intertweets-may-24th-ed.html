@@ -1,0 +1,11 @@
+---
+layout: legacy-post
+title: Today in the Intertweets (May 24th Ed)
+wordpress_id: 909
+wordpress_url: http://disclojure.org/?p=909
+date: 2010-05-24 13:34:33.000000000 -07:00
+---
+<ul>
+	<li>Extending Clojure's STM with external transactions (<a href="http://groups.google.com/group/clojure/browse_thread/thread/aa22a709501a64ac">here</a>, via @jneira) -- This is a very interesting proposal from Dave Griffith. The idea is to allow Clojure STM manage external transactions in a way that either both synchronized changes in shared memory and external transactions all work, or they all are rolled back. This would help greatly in writing highly-reliable systems that rely, for example, in committing changes both in memory and on file in order to guarantee a safe restore in case of  a crash; and for this to work, the each change must be done in a transaction.</li>
+	<li>#clojure pattern matching lib Matchure is now clojure.contrib.match (<a href="http://groups.google.com/group/clojure/msg/d3f8b7c230e0330a">here</a>, via @wmacgyver) -- If you are using <a href="http://github.com/dcolthorp/matchure">Matchure</a> already in your projects, know that there might be some backwards-incompatible changes coming before becoming part of clojure.contrib.</li>
+</ul>

@@ -1,0 +1,8 @@
+# Jekyll
+permalink: /:categories/:title/
+exclude: [release.sh]
+name: Disclojure, 
+pygments: true
+domain: disclojure.org
+description: <todo>
+

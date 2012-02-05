@@ -1,0 +1,19 @@
+---
+layout: legacy-post
+title: Today in the Intertweets (Dec 9th Ed)
+wordpress_id: 368
+wordpress_url: http://disclojure.org/?p=368
+date: 2009-12-09 23:25:14.000000000 -08:00
+---
+<ul>
+	<li>Riastradh's Lisp Style Rules (<a href="http://mumble.net/~campbell/scheme/style.txt">here</a>, via @delicious50) -- No one can beat this rationale: "The parentheses grow lonely if their closing brackets are all kept separated and segregated."</li>
+	<li>Here's a simpler version of debug REPL that works with an unmodified Clojure compiler (<a href="http://gist.github.com/252421">here</a>, via @atosborne) -- this is a variation of @georgejahad's debug repl that he posted <a href="http://georgejahad.com/clojure/debug-repl.html">a couple of days ago</a>, with the difference that this one does not need changes in the clojure compile (although it seems this version might have issues with SLIME.)</li>
+	<li>I have updated build.clojure.org to include maven repo snapshots for #clojure "new" and "master" (<a href="http://build.clojure.org/snapshots/org/clojure/clojure/">here</a>, via @dysinger)
+<ul>
+	<li>If you were using build.clojure.org #clojure 1.1.0-alpha-SHAPSHOT you need to switch it to 1.1.0-master-SHAPSHOT as per the new build change (via @dysinger)</li>
+</ul>
+</li>
+	<li>Here's my bare-bones .emacs.d dir. Clone this, elpa install clojure/slime/swank (<a href="http://github.com/dysinger/emacs.d">here</a>, via @dysinger) -- setting up Emacs to work with Clojure is getting simpler and simpler. Now pretty much everything you need is in ELPA</li>
+	<li>Released CBench, a simple benchmarking library for #Clojure (<a href="http://writequit.org/blog/?p=332">here</a>, via @thnetos) -- a helper  library that allows to conveniently perform benchmarks on clojure function calls by running the test many times and then aggregating the resulting values for each run into meaningful statistics.</li>
+	<li>Tuning Concurrent Clojure (<a href="http://www.tbray.org/ongoing/When/200x/2009/12/08/WF-Tuning-Clojure">here</a>, via @timbray) -- After the Tim Bray's mysterious post a few days ago about his Clojure implementation of Wide Finder 2 being "*insanely* fast", and him being "crackling with joy"  (this is part of his <a href="http://www.tbray.org/ongoing/When/200x/2009/09/27/Concur-dot-next">concur.next</a> series of articles), Tim posted an article explaining how he went about optimizing his Wide Finder 2 and the results he measured. It is important to note that he jumped the gun when he made those claims about speed and that the version of Wide Finder that he optimized to be even faster than Scala(!) was not WF2, but WF1. WF2 computes many more statistics than WF1, and it so happened that optimizing WF2 was much more complicated than optimizing WF1; the results achieved were nowhere near as good as those of  WF1's optimization. Very interesting read for anyone looking to scale non-trivial Clojure applications.</li>
+</ul>

@@ -1,0 +1,28 @@
+---
+layout: legacy-post
+title: Today in the Intertweets (Nov 17th Ed.)
+wordpress_id: 286
+wordpress_url: http://disclojure.org/?p=286
+date: 2009-11-17 23:47:39.000000000 -08:00
+---
+<ul>
+	<li>#Clojure Support arbitrary functional destructuring via -&gt; and -&gt;&gt; (<a href="http://www.assembla.com/spaces/clojure/tickets/211-Support-arbitrary-functional-destructuring">here</a>, via @fogus). This is just a proposal, and it would work like this:</li>
+[clj]
+user=&gt; (let [(-&gt; str a) 1] a)
+&quot;1&quot;
+
+user=&gt; (let [[a (-&gt; str b) c] [1 2]] (list a b c))
+(1 &quot;2&quot; nil)
+
+user=&gt; (let [(-&gt;&gt; (map int) [a b]) &quot;ab&quot;] (list a b))
+(97 98)
+[/clj]
+	<li>tweaked my bin/clj script to give formatted #clojure stacktraces. (<a href="http://gist.github.com/237162 ">here</a>, via @mmcgrana) -- Neat!
+
+[caption id="attachment_296" align="alignnone" width="361" caption="Fancy stacktraces for clojure (click for original image)"]<a href="http://img.skitch.com/20091117-re5bqm6f5axg25mxpwcbcx53f8.png"><img class="size-full wp-image-296" title="Screen shot 2009-11-17 at 9.48.22 PM" src="http://disclojure.org/wp-content/uploads/2009/11/Screen-shot-2009-11-17-at-9.48.22-PM.png" alt="Cool formating of Exceptions in Clojure (clik for original image)" width="361" height="256" /></a>[/caption]</li>
+</ul>
+<!--more-->
+<ul>
+	<li>How to optimize a Clojure program properly (<a href="http://clj-me.cgrand.net/2009/11/17/life-of-brian/">here</a>, via @cgrand) -- Cristophe takes a look at <a href="http://www.bestinclass.dk/index.php/2009/10/brians-functional-brain/">Lau's implementation</a> of Brian's Brain and looks for ways of making the code run faster. He achieves a 5x speed increase, so it's worth looking at the proposed optimization techniques.</li>
+	<li>Clojars: an alternative to Maven's Central Repository for #clojure projects with much less hassle (<a href="http://ow.ly/Dct1">here</a>, via @tbatchelli)</li>
+</ul>

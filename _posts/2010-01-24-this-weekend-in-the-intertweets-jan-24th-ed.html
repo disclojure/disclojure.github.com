@@ -1,0 +1,29 @@
+---
+layout: legacy-post
+title: This weekend in the Intertweets (Jan 24th Ed)
+wordpress_id: 574
+wordpress_url: http://disclojure.org/?p=574
+date: 2010-01-24 23:53:34.000000000 -08:00
+---
+<ul>
+	<li>De-chunkifying Sequences in Clojure (<a href="http://blog.fogus.me/2010/01/22/de-chunkifying-sequences-in-clojure/">here</a>, via @fogus) -- Clojure 1.1 introduced chunked sequences, which evaluate their elements in chunks of 32 at a time. Remember sequences are lazy, so if you ask for the first element of the sequence, for example, clojure will compute the first 32 elements, but then the next 31 calls would be instantaneous. The reason for this is performance when dealing with large chunks of data. But if you want the original one-element-at-a-time behavior of clojure 1.0, @fogus introduces us to 'seq1', a rough cut of the official tool to obtain one-element-at-a-time sequences.</li>
+	<li>Crazy smart discussion on #clojure IRC re extending transient/persistent semantics to POJOs (via @stuartsierra)</li>
+	<li>clojure channels (<a href="http://map-str.appspot.com/2010/01/Channels-in-Clojure">here</a>, via @tebeka) -- This article is about a way to implement <a href="http://golang.org/">Go</a>-style  <a href="http://golang.org/doc/effective_go.html#chan_of_chan">channels</a> in clojure</li>
+	<li>I feel like I could make a special Ruby superclass that makes all subclasses STM-strict a la Clojure. Useful? (via @headius) -- Charles Nutter (a.k.a. @headius) is a JRuby core developer, now looking at clojure for some nice inspiration.
+<ul>
+	<li>And it's done, a JRuby extension that gives you transactional instance variables (a la Clojure STM) (<a href="http://gist.github.com/284140">here</a>, via @headius)</li>
+</ul>
+</li>
+	<li>For all the german #Clojure users: #clojure on Freenode. irc://irc.freenode.net/clojure.de It's small at the moment, but we will grow :) (via @The_Kenny)</li>
+	<li>I need a good (cheap) designer for a simple conference website for #clojure conj 2010 (plz) (via @dysinger) -- Clojure Conj 2010 conference is happening!</li>
+	<li>#clojure conference time and location being discussed. If you want to be heard, now is the time (<a href="http://groups.google.com/group/clojure/browse_thread/thread/7723d2afca4245c5">here</a>, via @wmacgyver) -- same as above... things are moving fast!</li>
+	<li>i love that the number one watched java project on github is another language, clojure. (<a href="http://github.com/languages/Java">here</a>, via @binarydud) -- Wat!!?!</li>
+	<li>discovering Vijual, a graph layout engine conceptually similar to graphviz for clojure (<a href="http://lisperati.com/vijual/">here</a>, via @rgaidot) -- the image below is self-explanatory...</li>
+</ul>
+<a href="http://lisperati.com/vijual/"><img class="alignnone size-full wp-image-576" title="Vijual-Example" src="http://disclojure.org/wp-content/uploads/2010/01/draw_tree1.png" alt="An example of a tree drawn by Vijual" /></a>
+<ul>
+	<li>JVM languages communites on Stack Overflow compared (<a href="http://meta.stackoverflow.com/questions/36590/sizes-and-overlaps-of-communities-on-the-sites/36703#36703">here</a>, via @dcsobral) -- Interesting that the clojure community is larger than the Haskell and Erlang ones, and just a tad smaller than the Scala and Groovy ones....</li>
+	<li>Posted the slides for my talk about Ring, the Clojure web app library (<a href="http://www.slideshare.net/mmcgrana/ring-web-apps-in-idiomatic-clojure">here</a>, via @mmcgrana)</li>
+	<li>Practical Clojure from @Apress to be released May 21st? I thought it was coming out in Feb. A tad dissappointed (via @looselytyped) -- So now we know when the clojure book from Apress is going to be released. Discount coupons anyone?</li>
+	<li>10 reasons to learn Clojure (or any other Lisp) (<a href="http://groovyguts.wordpress.com/2010/01/08/10-reasons-to-learn-clojure-or-any-other-lisp/">here</a>, via @jneira)</li>
+</ul>

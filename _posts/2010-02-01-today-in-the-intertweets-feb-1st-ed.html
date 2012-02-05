@@ -1,0 +1,26 @@
+---
+layout: legacy-post
+title: Today in the Intertweets (Feb 1st Ed)
+wordpress_id: 612
+wordpress_url: http://disclojure.org/?p=612
+date: 2010-02-01 23:46:49.000000000 -08:00
+---
+<ul>
+	<li>Yes but it's UGLY. No guarantees. (<a href="http://github.com/francoisdevlin/devlinsf-clojure-utils/blob/master/src/lib/sfd/debug.clj">here</a>, via @fulldisclojure) -- If you watched the<a href="http://vimeo.com/9114362"> latest screencast</a> from Full Disclojure you might have noticed the nifty inspector that Sean Devlin was using. Well, here is the source code for such inspector.</li>
+	<li>Clojure debug-repl now uses defmacro's new implicit &amp;env arg (<a href="http://groups.google.com/group/clojure/browse_thread/thread/564bb67e51e208d6">here</a>, via @georgejahad) --  This is an update version of <a href="http://georgejahad.com/clojure/debug-repl.html">debug-repl</a> that allows you open a debug REPL anywhere in your code so you can debug when the execution reaches the pre-defined point. This version allows you to exit the debugging environment quickly regardless of the level of nesting</li>
+	<li>clojure comojure gzip (<a href="http://nakkaya.com/2010/01/29/gzip-output-compression-in-compojure/">here</a>, via @tebeka) -- how to write a gzip handler for Compojure that gzips your pages before sending them back to the browser.</li>
+	<li>[...] Clojure pattern matching (<a href="http://www.brool.com/index.php/pattern-matching-in-clojure">here</a>, via @fogus) -- This links to a rather old article on a pattern haskell-esque pattern matching library for Clojure, for example:</li>
+</ul>
+[clj]; simple recursive evaluator
+(defn arithmetic [lst]
+  (match lst
+    v  :when (number? v)  v
+    [ _ &quot;error&quot; _]     &quot;error&quot;
+    [ _ _ &quot;error&quot;]     &quot;error&quot;
+    [ &quot;add&quot; a b ]      (+ (arithmetic a) (arithmetic b))
+    [ &quot;sub&quot; a b ]      (- (arithmetic a) (arithmetic b))
+    [ &quot;mul&quot; a b ]      (* (arithmetic a) (arithmetic b))
+    [ &quot;div&quot; a b ]      (/ (arithmetic a) (arithmetic b))
+    [ &quot;squared&quot; a ]    (arithmetic [&quot;mul&quot; (arithmetic a) (arithmetic a)])
+    _                  &quot;error&quot; ))
+[/clj]

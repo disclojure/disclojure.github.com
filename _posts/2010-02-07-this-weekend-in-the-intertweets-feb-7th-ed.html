@@ -1,0 +1,31 @@
+---
+layout: legacy-post
+title: This weekend in the Intertweets (Feb 7th Ed)
+wordpress_id: 635
+wordpress_url: http://disclojure.org/?p=635
+date: 2010-02-07 23:43:15.000000000 -08:00
+---
+<ul>
+	<li>Saving #Incanter charts as PDF documents (<a href="http://data-sorcery.org/2010/02/05/pdf-charts/">here</a>, via @liebke) -- Title says it all. Now you can save your nifty charts to a PDF file. It is a real vector-based PDF to boot, not a rasterized one, so the charts in the PDF file scale nicely.</li>
+	<li>Dark theme for #Incanter charts (<a href="http://data-sorcery.org/2010/02/06/set-theme/">here</a>, via @liebke) -- Apparently where David Liebke lives there are no weekends, only weekdays, so he keeps improving his Incanter project.</li>
+	<li>Take a look at the proposed Rohner Arrow (<a href="https://gist.github.com/296970/8485a1f42c4b898426caf4cb5ce6b72e2350f9d4">here</a>, via @fulldisclojure) -- Awesome macro that lets you ...er, just take a look at the code snippet below:</li>
+</ul>
+[clj]
+user=&gt; (macroexpand-all '(-&gt;r c (+ _ 32) (* 1.8 _)))
+(* 1.8 (+ c 32))
+[/clj]
+<ul>
+	<li>Want to play with a clojure CLR REPL and don't want to compile it yourself? I've made a crude installer (<a href="http://cloud.github.com/downloads/paulbatum/clojure-clr/Clojure.Setup.msi">here</a>, via @paulbatum) -- Clicking the link will prompt your browser to download said installer. I have not tested it, since I do not have a Windows machine.</li>
+	<li>I just released some updates to CLJENV. If you didn't know, it's like virtualenv for Clojure (<a href="http://github.com/offbytwo/cljenv">here</a>, via @offbytwo) -- Lets you work (on Unix) with different Clojure environments, and be able to switch between them easily. "CLJENV includes clojure and contrib 1.1, slime, clojure-mode and swank-clojure. Also, a clojure script that does what you expect."</li>
+	<li>rewrote clojure-json encoder using clojure 1.2 protocols, more than 2x speedup for same functionality. Yay! (via @danlarkin) -- Great anecdotal evidence that that the new protocol addition was a good decision.</li>
+	<li>Mu: Google AI Challenge in Clojure (<a href="http://whollyweirdwyrd.blogspot.com/2010/02/google-ai-challenge-in-clojure.html">here</a>, via @jneira) -- Google sponsors an <a href="http://csclub.uwaterloo.ca/contest/">AI Challenge</a> with the University of Waterloo to create the smartest 'tron' player. The author provides a clojure version of the 'starter-package' that Google has made available for the challengers. Below is a video of a few 'tron' AI players playing. Happy hacking!!!</li>
+</ul>
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="425" height="344" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowFullScreen" value="true" /><param name="allowScriptAccess" value="always" /><param name="src" value="http://www.youtube.com/v/mwDKMiAfxFE&amp;color1=0xb1b1b1&amp;color2=0xcfcfcf&amp;hl=en_US&amp;feature=player_embedded&amp;fs=1" /><param name="allowfullscreen" value="true" /><embed type="application/x-shockwave-flash" width="425" height="344" src="http://www.youtube.com/v/mwDKMiAfxFE&amp;color1=0xb1b1b1&amp;color2=0xcfcfcf&amp;hl=en_US&amp;feature=player_embedded&amp;fs=1" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+
+Want to meet-up with fellow Clojurers/istas/ians? Here are the new options announced this weekend:
+<ul>
+	<li>Mon Feb 7th @ 7pm in Singapore: slides ready, now to practice a few times &amp; go over the code before Monday (<a href="http://groups.google.com.sg/group/singapore-functional-programmers/browse_thread/thread/8f07f4a00932a465?hl=en&amp;pli=1">here</a>, via @mmazur)</li>
+	<li>Wed Feb 10th @ 7.30pm in Amsterdam: Amsterdam Clojurians: Meetup next Wednesday? (<a href="http://groups.google.com/group/amsterdam-clojurians/browse_frm/thread/379f202852477491?hl=en">here</a>, via @neotyk)</li>
+	<li>Thu Feb 11th @ 7pm in Seattle, WA: Seattle Clojure meeting will be on the 11th (Thurs) at 7pm at U-district @zokacoffee.  Swing on by! (<a href="http://groups.google.com/group/clojure/browse_thread/thread/6cc17288d23cbf69">here</a>, via @technomancy)</li>
+</ul>
+<ul></ul>

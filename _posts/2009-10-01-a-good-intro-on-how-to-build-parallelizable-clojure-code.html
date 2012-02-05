@@ -1,0 +1,22 @@
+---
+layout: legacy-post
+title: A good intro on how to build parallelizable clojure code
+wordpress_id: 119
+wordpress_url: http://disclojure.org/?p=119
+date: 2009-10-01 23:04:44.000000000 -07:00
+---
+Lau from <a href="http://blog.bestinclass.dk/" target="_blank">bestinclass.dk</a> has written another excellent <a href="http://blog.bestinclass.dk/index.php/2009/10/brians-functional-brain/" target="_blank">article</a>. I would highly recommend going Lau's blog and reading every single one the articles in there, for their high educational value, especially if you are new --or even not so new-- to Clojure in particular and Functional Programming in general.
+
+The article referred to walks the reader through the construction of a <a href="http://en.wikipedia.org/wiki/Brian%27s_Brain" target="_blank">Brian's Brain</a> graphical animation in 2D with only 68 lines of Clojure code. Yes, 68 lines.
+
+<!--more-->
+
+The take-away of this article, in my opinion, is how Lau breaks down what would be an iterative problem into a functional one, only to then show how this functional problem can be easily parallelized by replacing a sequential map with a parallel map (pmap). Once your data is known to be immutable and you have broken the problem down to a functional one, the parallelization of your code execution is that easy. Lau later shows how this parallelized implementation lets clojure fully utilize all the cores available in your machine.
+
+In the future, when asked about the suitability of functional programming and persistent data structures in today's age, I will refer people to this article since it exposes the magic of the functional paradigm and how such paradigm can be leveraged today with multicore CPUs.
+
+The discussion on how to create the graphical representation of Brain's Brain is also interesting, and goes to show how good the interoperability between Clojure and Java can get.
+
+I remember when learning functional programming back in school that the most difficult part of writing Lisp or ML code was not the coding itself, but the breaking down of the problem at hand into small pieces and then put those pieces together in a functional manner. I remember that the hard part of it was to unlearn the 'loops' that are so pervasive in imperative languages, and by unlearning those loops one's brain could start thinking freely again. I recall those moments as ones of ecstasy. This article brought back to me some of those memories :)
+
+<a href="http://blog.bestinclass.dk/index.php/2009/10/brians-functional-brain/" target="_blank">"Brian's functional brain"</a>

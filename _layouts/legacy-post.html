@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  {% include header.html %}
+  <body>
+    {% assign post = page %}
+    {% comment %}
+    "wrapper" is required for the sticky footer
+    {% endcomment %}
+    <div class="post wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="span8 offset2">
+            {% include post.html %}
+          </div>
+        </div>
+      </div>
+      {% comment %} 
+      "push" is required for the sticky footer 
+      {% endcomment %}
+      <div class="push"></div>
+    </div>
+    {% include footer.html %}
+  </body>
+</html>

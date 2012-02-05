@@ -1,0 +1,19 @@
+---
+layout: legacy-post
+title: Today in the Intertweets (July 20th Ed)
+wordpress_id: 1040
+wordpress_url: http://disclojure.org/?p=1040
+date: 2010-07-20 23:33:14.000000000 -07:00
+---
+Better late than never. I finally got access to the Internet, just to realize that there is some kind of 'virtual' language war going on: Clojure vs Haskell vs Scala vs ... vs who-knows-what-language. Oh well! The mandatory link to "Someone is wrong on the Internet" can be found <a href="http://xkcd.com/386/">here</a>.
+
+Here is what happened in the last few days:
+<ul>
+	<li>In-Depth Book Review: Practical Clojure (<a href="http://programmingzen.com/2010/07/16/in-depth-book-review-practical-clojure/">here</a>, via @acangiano) -- A review of the recently published book <a href="http://www.amazon.com/exec/obidos/ASIN/1430272317">"Practical Clojure</a>", by Luke VanderHart and Stuart Sierra. Summary: a good book that could use some more non-trivial examples.</li>
+	<li>Better #Clojure test results on the command line. Changes reporting of "lein test": diffs, clj-stacktrace and color (<a href="http://formpluslogic.blogspot.com/2010/07/better-clojure-test-results-on-command.html">here</a>, via @brentonashworth) -- This is about this fabulous new tool that helps you find out quickly why your tests failed, <a href="http://github.com/brentonashworth/deview">deview</a>. In this new release, you can run it from the command line (via lein) and get the results right there. Before it would be html based so you needed a browser to see the results.</li>
+	<li>Instant clojure REPL: cljr + nailgun = big win (<a href="http://gist.github.com/478807">here</a>, via @antoniogarrote) -- A couple of scripts that will set you up using <a href="http://github.com/liebke/cljr">cljr</a> with <a href="http://martiansoftware.com/nailgun/index.html">nailgun</a>. The end result is Clojure starting very fast, as there is no need to instantiate a new JVM every time you call cljr.</li>
+	<li>Getting Started w/ Google App Engine &amp; Clojure (<a href="http://steve.vinoski.net/pdf/IC-Getting_Started_with_Google_App_Engine_and_Clojure.pdf">here</a>, via @linksgoogle) -- This is the PDF of an article appeared at this months' issue of <a href="http://www.computer.org/portal/web/internet/home">IEEE Internet Computing</a>, and it's about programming web apps in clojure to be deployed within the Google App Engine infrastructure.</li>
+	<li>Leiningen 1.2.0 is out; biggest release yet ... have fun, build some Clojure. (<a href="http://github.com/technomancy/leiningen/blob/master/NEWS ">here</a>, via @technomancy) -- Lots of fixes and many new features that will make lein easier to adapt to your workflow.</li>
+	<li>Continuing my series of micro-interviews with Clojure Hackers I present (take 7 (david-nolen)) aka. @swannodette (<a href="http://blog.fogus.me/2010/07/19/take-7-david-nolen/">here</a>, via @fogus)</li>
+	<li>(-&gt;&gt; (load-workbook "spreadsheet.xlsx") (select-sheet "Price List") (select-columns {:A :name, :B :price})) (<a href="http://github.com/ative/docjure">here</a>, via @mjul) -- If you read the code carefully you'll realize that what it is doing is the following: open an MS Excel spreadsheet and read some values from one of the sheets. Pretty impressive for a tweet, don't you think? This is @mjul's creative way to announce <a href="http://github.com/ative/docjure">docjure</a>, a library for reading and writing MS Office documents with Clojure. This library wraps Apache POI, so all the restrictions of POI also apply here.</li>
+</ul>

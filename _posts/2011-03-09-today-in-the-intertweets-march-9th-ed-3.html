@@ -1,0 +1,17 @@
+---
+layout: legacy-post
+title: Today in the Intertweets (March 9th Ed)
+wordpress_id: 1571
+wordpress_url: http://disclojure.org/?p=1571
+date: 2011-03-09 23:23:34.000000000 -08:00
+---
+<ul>
+	<li>If you're like me and can't stand paredit mode with Clojure, do this: (add-hook 'clojure-mode-hook (lambda () (paredit-mode nil))) (via @ZurichFix) -- Emacs comes with a plugin that assists you into writing list code (called paredit). It works well, or very well, but it is not easy and it doesn't fit with everybody. So the tweet tells you how to turn it off. The alternative to turning it off is to memorize <a href="http://www.emacswiki.org/emacs/PareditCheatsheet">this</a>.</li>
+	<li>rle in a tweet: (defn rle [s] (map (juxt count first) (partition-by identity s))) (via @cgrand) -- Run Length Encoding in one tweet (with characters to spare!)
+<ul>
+	<li>@cgrand for completeness, (defn rld [s] (mapcat (fn [[n e]] (repeat n e)) s)) (via @alandipert) -- For completeness, of course, Run Length Decoding</li>
+	<li>Recursion is a low-level operation! (<a href="http://blog.fogus.me/2011/03/09/recursion-is-a-low-level-operation/">here</a>, via @fogus) -- A lengthier explanation on how such succinct functions are built, inspired by the previous tweets.</li>
+</ul>
+</li>
+	<li>Partial content for ring (<a href="http://blog.remvee.net/2011/03/09/Partial_content_for_ring?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=Feed%3A+clojure+%28Planet+Clojure%29&amp;utm_content=Twitter">here</a>, via @planetclojure) -- When serving video you don't want to serve a whole movie in one shot. Instead, browsers request parts of the movie, or partial content. This is a ring handler that allows for this (with limitations)</li>
+</ul>

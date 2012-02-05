@@ -1,0 +1,11 @@
+---
+layout: legacy-post
+title: Today in the Intertweets (Oct 15th Ed)
+wordpress_id: 1249
+wordpress_url: http://disclojure.org/?p=1249
+date: 2010-10-14 23:15:42.000000000 -07:00
+---
+<ul>
+	<li>Add a "Turbo" button: (defmacro with-turbo [turbo-on &amp; body] `(let [~'map ~(if turbo-on `clojure.core/pmap `clojure.core/map)] ~@body)) (via @rplevy) -- And witht this, you can turn all your calls to map into calls to pmap, thus parallelizing your code, with only wrapping it with (with-turbo &lt;your code here&gt;).</li>
+	<li>Its (sic) nice when SQL can be lazy (<a href="http://asymmetrical-view.com/2010/10/14/clojure-lazy-walk-sql-table.html">here</a>, via @kyleburton) -- clojure.contrib.sql provides result sets as lazy seqs that will pull the results from the DB server as needed, if the JDBC driver allows for it. It turns out that for PostgresDB this doesn't work and all the data is fetched at once from the DB server. This article describes a solution to this problem, which involves chunking the query to the database (and not the results) while maintaining the lazy seq abstraction.</li>
+</ul>

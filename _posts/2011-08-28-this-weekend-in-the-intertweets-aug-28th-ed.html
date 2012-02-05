@@ -1,0 +1,22 @@
+---
+layout: legacy-post
+title: This weekend in the Intertweets (Aug 28th Ed)
+wordpress_id: 1933
+wordpress_url: http://disclojure.org/?p=1933
+date: 2011-08-28 22:32:50.000000000 -07:00
+---
+<ul>
+	<li><a href="http://groups.google.com/group/clojure/msg/dd82cc60855b1ca3">Excellent writeup on why #clojure won't benefit from JVM 7 invokedynamic</a><a href="http://groups.google.com/group/clojure/browse_thread/thread/d66af49bef572e8a/dd82cc60855b1ca3?#dd82cc60855b1ca3"> </a>(via @spariev) -- The <a href="http://groups.google.com/group/clojure/browse_thread/thread/d66af49bef572e8a/d82cf96e849c4ce0">whole thread</a> is a very interesting read actually. Tal Liron is trying to experiment with Clojure making use of the new InvokeDynamic JVM feature that is designed to improve the performance of dynamic calls to object's methods. It turns out that Clojure is already clever about this and it is mostly not needed, but the experiments goes on. <a href="http://news.ycombinator.com/item?id=2928285">The related HN thread</a> contains a great discussion about this topic with JRuby's author.
+<ul>
+	<li>@headius @robilad It's not dynamic dispatch because Clojure isn't object-oriented. Throws away a large layer of indirection. (via @djspiewak) -- Nicely put.</li>
+	<li>Today's #clojure news: statically compiling a dynamic (mostly-immutable) #language simplifies many optimization hurdles (via @BrianTRice) -- Good summary.</li>
+</ul>
+</li>
+	<li><a href="https://github.com/ActiveState/stackato-samples/tree/master/clojure">If you didn't know already, Stackato now supports Clojure as well! </a>(via @ActiveState) -- <a href="http://www.activestate.com/cloud">Stackato</a> is based on <a href="http://www.cloudfoundry.com/">CloudFoundry</a>, which is an OSS platform from VMWare that  let's you create your own private Platform as a Service infrastructure, adds support for Clojure.</li>
+	<li><a href="https://github.com/cloudfoundry/vcap/pull/96">Seems like #clojure for #cloudfoundry is near</a>(via @nilswloka) -- Speaking of which, CloudFoundry itself is getting (maybe?) Clojure support. This is how all pull request on github sould be: "CloudFoundry does not have native Clojure support. Here I fixed it. It's just like Heroku's"</li>
+	<li>According to wikipedia:"<a href="http://en.wikipedia.org/wiki/Lisp_(programming_language)">Today, the most widely known general-purpose Lisp dialects are Common Lisp, Scheme, and Clojure</a>" (via @KushalP) -- Now, with all this chatter about PaaS supporting Clojure, this particular ordering might be about to change!</li>
+	<li>#clojure 1.3.0-beta2 ready! (via @paraseba) -- <a href="http://repo1.maven.org/maven2/org/clojure/clojure/1.3.0-beta2/clojure-1.3.0-beta2.zip">Get it</a> while it's hot! Or, you know, update your project.clj or your devils-favorite-torture-tool.xml.</li>
+	<li><a href="https://trakrapp.com/">A nice (and free) issue tracker: trakrapp.com. Done in Clojure I believe </a>(via @fredwu) -- <a href="http://www.reddit.com/r/Clojure/comments/iixjl/trackr_an_issue_tracker_written_in_clojure/">Confirmed</a>.</li>
+	<li><a href="http://agileskills2.org/blog/2011/08/28/reaction-to-clojure-towards-the-essence-of-programming-from-a-scala-perspective/">Reaction to “Clojure: Towards The Essence Of Programming” from a Scala perspective: #Scala = #Clojure + static typing</a> (via @mariofusco) -- Sort of misses the point, but nice to see how Scala can also be very concise</li>
+	<li><a href="http://blog.dhananjaynene.com/2011/08/cperformance-comparison-languages-styles-and-vms-java-scala-python-erlang-clojure-ruby-groovy-javascript/">With great regret, retracted a blog post</a> (via @dnene) -- And with greatest regret we publish your retraction. It's hard to write posts with programming language performance benchmarks (or any benchmark, really) without realizing it is an enormous task to get it right, if possible at all. Your honesty is appreciated.</li>
+</ul>
