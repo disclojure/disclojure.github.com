@@ -5,4 +5,5 @@ name: Disclojure,
 pygments: true
 domain: disclojure.org
 description: <todo>
+paginate: 10
 

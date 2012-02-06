@@ -2,10 +2,10 @@
 <html lang="en">
   {% include header.html %}
   <body>
+    {% include navbar.html %}
     {% assign post = page %}
-    {% comment %}
-    "wrapper" is required for the sticky footer
-    {% endcomment %}
+
+    {% comment %} "wrapper" is needed for sticky footnote {% endcomment %}
     <div class="post wrapper">
       <div class="container">
         <div class="row">

@@ -4,12 +4,13 @@
 }
 html, body {
     height: 100%;
+    color: #404040;
 }
 .wrapper {
     min-height: 100%;
     height: auto !important;
     height: 100%;
-    margin: 0 auto -3em;
+    margin: 0 auto -5.5em; /* added 2.5 to account for the 4px of the topbar */
 }
 .footer, .push {
     height: 3em;
@@ -25,4 +26,42 @@ html, body {
 
 h1 {
     text-align: center;
+    color: #404040;
+}
+
+.navbar .brand {
+    font-family: 'IM Fell English', serif;
+    font-size: 36px;
+    text-align: center;
+    padding: 0px 20px 1px;
+
+}
+
+a {
+    color: #CE1433;
+    font-weight:bold;
+}
+
+.nav {
+    font-size: 18px;
+}
+
+.navbar-search .search-query  {
+    font-family: 'PT Serif', Georgia, Times, 'Times New Roman', serif;
+    font-size: 16px;
+}
+
+body {
+    padding-top: 40px;
+}
+
+
+
+.navbar .nav .active > a {
+    background-color: #293F4D;
+    color: #C0CDCF;
+}
+
+.navbar .nav > li > a {
+    color: #C0CDCF;
 }
