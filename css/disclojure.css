@@ -13,6 +13,7 @@ html, body {
     margin: 0 auto -5.5em; /* added 2.5 to account for the 4px of the topbar */
 }
 .footer, .push {
+    clear: both;
     height: 3em;
     margin-top: 1em;
 }
@@ -23,45 +24,58 @@ html, body {
     text-align: center;
     margin-top: 30px;
 }
-
 h1 {
     text-align: center;
-    color: #404040;
+    color: #334F60;
 }
-
+h1 a,
+h2 a {
+    color: #334F60;
+}
 .navbar .brand {
     font-family: 'IM Fell English', serif;
     font-size: 36px;
     text-align: center;
-    padding: 0px 20px 1px;
-
+    padding: 0px 20px 1px; 
 }
 
 a {
     color: #CE1433;
-    font-weight:bold;
 }
 
+#social-toggle a {
+    color: #334F60;
+}
 .nav {
-    font-size: 18px;
+    font-size: 20px;
+    font-family: 'IM Fell English', serif;
+    font-weight: normal;
+   padding: 0px 20px 0px; 
 }
 
-.navbar-search .search-query  {
-    font-family: 'PT Serif', Georgia, Times, 'Times New Roman', serif;
-    font-size: 16px;
+.navbar .nav {
+    float: right;
 }
 
+/*
 body {
-    padding-top: 40px;
-}
-
-
-
-.navbar .nav .active > a {
+    padding-top: 40px; 
+} 
+*/
+.navbar .nav .active {
     background-color: #293F4D;
     color: #C0CDCF;
 }
 
 .navbar .nav > li > a {
     color: #C0CDCF;
+}
+
+#social-post {
+    padding-top: 30px;
+}
+.page-header{
+    padding-bottom: 5px;
+    padding-top: 35px;
+    border-bottom: 0px;
 }

@@ -7,7 +7,7 @@ section: home
 <!doctype html>
 <html lang="en">
   {% include header.html %}
-
+  
   <body>
     {% include navbar.html %}
     {% comment %} "wrapper" is needed for sticky footnote {% endcomment %}
@@ -17,24 +17,23 @@ section: home
         {% include banner-main.html %}
       </section>
       {% endcomment %}      
-
+      
       {% assign post = site.posts.first %} 
       
       <div class="row">
         <div class="span8 offset2">
           {% include post.html %}
         </div>
-      </div>
+      </div> <!-- post row -->
       
       <div class="row archive-link">
-        <h1><a href="/archive" title="Intertweets Archive">
-            &larr; Older Intertweets </a></h1>
-        </div>
-
-        {% comment %} "push" is required for the sticky footer {% endcomment %}
-        <div class="push"></div>
-      </div>
-      {% include footer.html %}
+        <div class="span8 offset2">
+          <h2><a href="/latest" title="Latest Intertweets">
+              &larr; Older Intertweets </a></h2> </div> </div>
+      {% comment %} "push" is required for the sticky footer {% endcomment %}
+      <div class="push"></div>
+    </div>
+    {% include footer.html %}
     
   </body>
 </html>
