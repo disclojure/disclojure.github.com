@@ -2,21 +2,23 @@
   <div class="page-header">
     {% if post.title %}
       <h1 class="title">
-        {{ post.title}}
-      </h1>
+        <a href="{{post.url}}" title="{{post.title}}">
+          {{post.title}}</a></h1>
     {% endif %}
   </div>
   <div class="post_content">
     {{ post.content }}
   </div>
   <div id="social-toggle">
-      <a href="http://{{ site.domain }}{{ post.url }}#disqus_thread" data-toggle="collapse"
+      <a href="#disqus_thread" data-toggle="collapse"
       data-target="#social-post">
         Comment</a>
       <a href="#" data-toggle="collapse" data-target="#social-post">
         / <span id="twitter-count"></span> Tweets / Share </a>
   </div>
   <div class="row">
+    {% assign share-url = post.url %}
+    {% assign share-title = post.title %}
       {% include social-post.html %}
   </div>
 </div><!--content-->
