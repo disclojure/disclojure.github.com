@@ -1,35 +1,39 @@
 ---
 layout: nil
-description: Disclojure posts daily summaries of selected development topics.
+description: Disclojure posts daily summaries of selected development
+   topics.
+section: home
 ---
 <!doctype html>
 <html lang="en">
-  {% include heading.html %}
-
+  {% include header.html %}
+  
   <body>
-    <div class="container-fluid">
+    {% include navbar.html %}
+    {% comment %} "wrapper" is needed for sticky footnote {% endcomment %}
+    <div class="container wrapper">
       {% comment %}
       <section id="banner">
         {% include banner-main.html %}
       </section>
       {% endcomment %}      
       
-      <section id="news" title="Latest Posts">
-        <div class="page-header">
-          <h1><a href="/news" title="Latest Pallet News">Latest News &raquo;</a>
-          </h1>
-        </div>
-        
-        <ul class="unstyled">
-          {% for post in site.posts limit:10 %}
-          <li><span>{{ post.date | date_to_string }}</span> &raquo;
-            <a href="{{ post.url }}">{{ post.title }}</a></li>
-          {% endfor %}
-        </ul>
-      </section>
+      {% assign post = site.posts.first %} 
       
+      <div class="row">
+        <div class="span8 offset2">
+          {% include post.html %}
+        </div>
+      </div> <!-- post row -->
+      
+      <div class="row archive-link">
+        <div class="span8 offset2">
+          <h2><a href="/latest" title="Latest Intertweets">
+              &larr; Older Intertweets </a></h2> </div> </div>
+      {% comment %} "push" is required for the sticky footer {% endcomment %}
+      <div class="push"></div>
     </div>
-    {% include footing.html %}
+    {% include footer.html %}
     
   </body>
 </html>
