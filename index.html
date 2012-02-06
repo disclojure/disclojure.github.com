@@ -1,0 +1,35 @@
+---
+layout: nil
+description: Disclojure posts daily summaries of selected development topics.
+---
+<!doctype html>
+<html lang="en">
+  {% include heading.html %}
+
+  <body>
+    <div class="container-fluid">
+      {% comment %}
+      <section id="banner">
+        {% include banner-main.html %}
+      </section>
+      {% endcomment %}      
+      
+      <section id="news" title="Latest Posts">
+        <div class="page-header">
+          <h1><a href="/news" title="Latest Pallet News">Latest News &raquo;</a>
+          </h1>
+        </div>
+        
+        <ul class="unstyled">
+          {% for post in site.posts limit:10 %}
+          <li><span>{{ post.date | date_to_string }}</span> &raquo;
+            <a href="{{ post.url }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </section>
+      
+    </div>
+    {% include footing.html %}
+    
+  </body>
+</html>

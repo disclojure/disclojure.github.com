@@ -1,0 +1,18 @@
+---
+layout: legacy-post
+title: Today in the Intertweets (July 14th Ed)
+wordpress_id: 1032
+wordpress_url: http://disclojure.org/?p=1032
+date: 2010-07-14 23:22:22.000000000 -07:00
+---
+As disclojure hinted yesterday, Clojure 1.2.0-beta1 is out. Congratulations to all and many many thanks to Rich and crew for pouring countless hours and brain cells into this project. From what I am gathering from comments here and there, this beta release might not cause a huge disruption in the young Clojure ecosystem, since there are many projects out there that were already using a pre-beta version of Clojure 1.2.0.
+
+Download Clojure and Clojure-contrib 1.2.0-beta1 from <a href="http://clojure.org/downloads">here</a>,  and make sure you check the release notes <a href="http://github.com/clojure/clojure/blob/1.2.x/changes.txt">here</a>, as they are full of good news!
+
+Other things happened today:
+<ul>
+	<li>Clojure, Multi-core, AWS Cluster Compute &amp; Lattes (<a href="http://dosync.posterous.com/clojure-multi-core-amazon-cluster-compute-lat">here</a>, via @hkrnws) -- Now that Amazon announced the availability of  <a href="http://aws.amazon.com/about-aws/whats-new/2010/07/13/announcing-cluster-compute-instances-for-amazon-ec2/">Cluster Compute</a> instances, which are big machines that you can reserve to be used in exclusivity, David Nolen went ahead and did some scalability tests with <a href="http://github.com/ztellman/aleph">Aleph</a>,  at $1.60/hr for a 8 CPU machine. Not too bad.</li>
+	<li>#clojure asynchronous http client (<a href="http://groups.google.com/group/clojure/msg/bd68f62d778c15be">here</a>, via @wmacgyver) -- Built on top of Ning's open sourced <a href="http://github.com/ning/async-http-client">async-http-client</a>, which in turn is built on top of <a href="http://jboss.org/netty">Netty</a>. Netty is getting a lot of love lately :)</li>
+	<li>I find it humorous that #clojure 1.2 is "beta" - we've been using it for 6 months (via @dysinger)</li>
+	<li>If deview is too much for you, then take a look at lein-difftest. Just like "lein test" but with diffs. (<a href="http://github.com/brentonashworth/lein-difftest">here</a>, via @brentonashworth) -- Yesterday we mentioned <a href="http://github.com/brentonashworth/deview">this promising</a> and very useful project to aid in testing and determining why tests failed. Now today the same author brings us a plugin for leiningen to make using Deview very easy.</li>
+</ul>

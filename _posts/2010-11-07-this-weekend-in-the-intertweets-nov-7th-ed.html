@@ -1,0 +1,24 @@
+---
+layout: legacy-post
+title: This weekend in the Intertweets (Nov 7th Ed)
+wordpress_id: 1291
+wordpress_url: http://disclojure.org/?p=1291
+date: 2010-11-07 23:33:31.000000000 -08:00
+---
+<ul>
+	<li>My clojure simplicity slides from #clojureconj and twitter are online (<a href="http://cloud.github.com/downloads/stuarthalloway/clojure-presentations/Clojure-Simplicity.pdf">here</a>, via @stuarthalloway)</li>
+	<li>Working on Clojure diff and patch functions for sequences. Ideas welcome. (<a href="https://github.com/brentonashworth/clj-diff">here</a>, via @brentonashworth) -- Grab two clojure sequences, create a patch by diffing them and apply the patch to a third sequence. Neat!</li>
+	<li>There's buzz about Microsoft's Reactive eXtensions in clojure land today (<a href="http://dev.clojure.org/display/design/Channels">here</a>, via @fogus) -- Indeed. Sane event driven development FTW:
+<ul>
+	<li>I've factored out channels into their own project (<a href="https://github.com/ztellman/lamina">here</a>, via @ztellman) -- seems related to the above to me...</li>
+	<li>"Observable" protocol with watcher support (<a href="https://github.com/stuartsierra/cljque/blob/e6e45bc14be2e8c4958c6b78ffab5ddaf35fd6eb/modules/cljque-base/src/main/clojure/cljque/api.clj">here</a>, via @stuartsierra) -- more RX</li>
+	<li>More RX-inspired #clojure Observables (<a href="https://github.com/stuartsierra/cljque/blob/e6e45bc14be2e8c4958c6b78ffab5ddaf35fd6eb/modules/cljque-base/src/main/clojure/cljque/combinators.clj">here</a>, via @stuartsierra)  --  even more RX</li>
+	<li>I can't help seeing a common pattern between RX stuff and Oleg's work on iteratees (<a href="http://okmij.org/ftp/Streams.html">here</a>, via @cgrand) -- Ok, that's enough, it's Friday guys! ;)</li>
+</ul>
+</li>
+	<li>clojure 1.3. alpha 3 (<a href="http://groups.google.com/group/clojure/browse_thread/thread/1ee3234f10803be4">here</a>, via @stuarthalloway) -- get it while it's hot! A new (dare I say experimental) printing method for maps is introduced.</li>
+	<li>Compojure, the repl, and vars (<a href="http://blog.darevay.com/2010/11/compojure-the-repl-and-vars/">here</a>, via @darevay) -- Building a compojure app and you don't want to restart the server at every code change? Do you want compojure to pick the changes right away? Use vars...</li>
+	<li>clojure and database - another approach. Could be interesting (<a href="http://anvil.io/2010/10/25/clojurize-the-data-not-the-database.html">here</a>, via @alexott_en) -- Interesting it is! This post outlines a proposal --with code!-- for a common intermediate data representation and common database access interfaces, so that all DB related clojure code can be largely insulated from what specific database the code is currently working with now, or in the future.</li>
+	<li>Leiningen 1.4.0 release candidate 1. Now with new tasks and test selectors for all your Clojure needs. (<a href="https://github.com/technomancy/leiningen/blob/master/NEWS">here</a>, via @technomancy)</li>
+	<li>HammockDB - a *very* incomplete CouchDB API implementation in Clojure and Ring. HT @jchris for Booth (<a href="https://github.com/mmcgrana/hammockdb">here</a>, via @mmcgranna) -- "[...]inspired by the more complete Ruby equivalent <a href="https://github.com/jchris/booth">Booth</a>[...]"</li>
+</ul>

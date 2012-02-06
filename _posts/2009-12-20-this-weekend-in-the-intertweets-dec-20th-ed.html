@@ -1,0 +1,42 @@
+---
+layout: legacy-post
+title: This weekend in the Intertweets (Dec 20th Ed)
+wordpress_id: 442
+wordpress_url: http://disclojure.org/?p=442
+date: 2009-12-20 22:25:56.000000000 -08:00
+---
+<ul>
+	<li>Pre/Post conditions for functions coming in #clojure 1.1 (<a href="http://clojure.org/special_forms#toc9">here</a>, via @thebusby)</li>
+[clj](defn constrained-sqr [x]
+    {:pre  [(pos? x)]
+     :post [(&gt; % 16), (&lt; % 225)]}
+    (* x x))[/clj]
+	<li>#clojure promise function implementation is 10 lines! (<a href="http://github.com/richhickey/clojure/blob/6109d41a975bf24b17681342591116a9897e4a27/src/clj/clojure/core.clj#L4577">here</a>, via @wmacgyver)</li>
+[clj](defn promise
+  &quot;... (edited) ...&quot;
+  []
+  (let [d (java.util.concurrent.CountDownLatch. 1)
+        v (atom nil)]
+    (proxy [clojure.lang.AFn clojure.lang.IDeref] []
+      (deref [] (.await d) @v)
+      (invoke [x]
+        (locking d
+          (if (pos? (.getCount d))
+            (do (reset! v x)
+                (.countDown d)
+                this)
+            (throw (IllegalStateException. &quot;Multiple deliver calls to a promise&quot;))))))))[/clj]
+	<li>Tail-call implementation for the JVM (<a href="http://weblogs.java.net/blog/forax/archive/2009/12/18/tailcall-anyone">here</a>, via @mikedouglas) -- a patch to the JVM source code that would provide TCI... if this patch exists and it works, does this mean we will see TCI in the JVM in our lifetime?</li>
+	<li>Tutorial: Continuation Monad in Clojure (<a href="http://intensivesystems.net/tutorials/cont_m.html">here</a>, via @timbray) -- If you understand monads, then I guess you'll find this tutorial 'easy'.</li>
+	<li>The Parenophobes strike again (<a href="http://kotka.de/blog/2009/12/The_Parenophobes.html">here</a>, via @kotarak) -- A defense of the lisp syntax from repeated attacks. Speaking to deaf ears maybe? Nonetheless, a good article.</li>
+	<li>Finally completely automated process of setting up Clojure, clojure-contrib, and vimclojure on new Linux installs (<a href="http://github.com/jakemcc/setup-clojure">here</a>, via @jakemcc) --  Related blog posts about how the scripts work <a href="http://jakemccrary.com/blog/2009/12/19/script-for-setting-up-vimclojure/">here</a>, <a href="http://jakemccrary.com/blog/2009/10/06/getting-started-with-clojure-and-vim/">here</a> and <a href="http://jakemccrary.com/blog/2009/10/06/setting-up-clojure/">here</a>.</li>
+	<li>Setting up #Clojure, #Incanter, Emacs, Slime, Swank, and Paredit (<a href="http://incanter-blog.org/2009/12/20/getting-started/">here</a>, via @liebke) -- "I’ll be demonstrating how to build and install Incanter (which includes Clojure and Clojure-contrib), and then set up a development environment with Emacs, Slime, Swank, and Paredit."</li>
+	<li>Adder: Python with a Lisp: lisp-1 compiled to #python bytecode like #clojure (<a href="http://www.thibault.org/adder/">here</a>, via @jneira) -- so, for when a clojure that runs on the python VM?
+<ul>
+	<li>From the project page: "Clojure has prepared the ground for the notion of a Lisp that integrates into an existing language" (via @stuartsierra)</li>
+</ul>
+</li>
+	<li>The Arc Challenge from a Clojure perspective (<a href="http://www.bestinclass.dk/index.php/2009/12/beating-the-arc-challenge-in-clojure/">here</a>, via @laujensen) -- While showing how Clojure is a very terse language by comparing it to Paul Graham's <a href="http://arclanguage.org/">Arc </a> (and as a response to <a href="http://arclanguage.org/item?id=722">Paul Graham's challenge</a>), Lau produces a web application that is the best example of the use of <a href="http://github.com/weavejester/compojure">Compojure</a> that I have seen so far (best as in smallest but complete)</li>
+	<li>Unit testing in Clojure (<a href="http://nakkaya.com/2009/11/18/unit-testing-in-clojure/">here</a>, via @aberant) -- I must have missed this one in November, but this is a nice tutorial on creating and running unit tests in clojure.</li>
+	<li>Mapping OOPS concepts to Clojure? Doable or Wrong thinking? (<a href="http://twitter.com/ajlopez/statuses/6858302930">here</a>, via @ajlopez) -- Walking into a hornets' nest, maybe?</li>
+</ul>

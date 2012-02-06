@@ -1,0 +1,16 @@
+---
+layout: legacy-post
+title: Today in the Intertweets (Nov 23rd Ed)
+wordpress_id: 1333
+wordpress_url: http://disclojure.org/?p=1333
+date: 2010-11-23 23:53:15.000000000 -08:00
+---
+<ul>
+	<li>@lispcoder Immutable data structs don't need cache coherency &amp; #clojure forces you to be explicit about state, so could leverage that mp (via @richhickey) -- This is in reference to <a href="http://www.goodgearguide.com.au/article/368762/intel_1_000-core_processor_possible/">this article</a> that @lispcoder tweeted yesterday. This article is about the 1000 core CPU projected by Intel which is using message passing between the different cores as means of synchronization, instead of the cache coherence techniques that are being used today. The author of the tweet implied that Clojure wouldn't be able to fully utilize the power of this CPU because of the message passing.</li>
+	<li>effort to abstract binary byte format continues by @ztellman in a #clojure byte-format DSL gloss (<a href="https://github.com/ztellman/gloss/wiki">here</a>, via @wmacgyver)</li>
+	<li>An X10 Controller in Clojure (<a href="http://blog.mired.org/2010/11/x10-controller-in-clojure.html">here</a>, via @mikewmeyer) -- I like projects that control things! "The goal is to have a web page to let me control the various X10 PLC modules scattered around the house: mostly it's lights, but the thermostat, a grill, a printer and the garage door opener are all controllable this way"</li>
+	<li>appengine-magic 0.3.0 is now available (<a href="https://github.com/gcv/appengine-magic">here</a>, via @vetoshev) --  This library abstracts away the infrastructural nuts and bolts of writing a Clojure application for the Google App Engine platform. From the <a href="https://groups.google.com/group/clojure/browse_thread/thread/c15714f7aabf0ba4">original announcement</a>: "The new version has full support for
+many App Engine services: the datastore, memcache, user Google account
+authentication, the blobstore, sending and receiving email, task
+queues, and remote URL access."</li>
+</ul>

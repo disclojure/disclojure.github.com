@@ -1,0 +1,52 @@
+---
+layout: legacy-post
+title: Today in the Intertweets (Dec 22nd Ed)
+wordpress_id: 462
+wordpress_url: http://disclojure.org/?p=462
+date: 2009-12-22 23:20:37.000000000 -08:00
+---
+<ul>
+	<li>Clojure is showing some promise in recent job postings (<a href="http://www.indeed.com/jobtrends?q=haskell,+clojure,+erlang,+scala&amp;l=">here</a>, via @drigoat) -- So what happened in July '09???</li>
+</ul>
+<div style="width: 420px;"><a title="haskell, clojure, erlang, scala Job Trends" href="http://www.indeed.com/jobtrends?q=haskell%2C+clojure%2C+erlang%2C+scala">
+<img src="http://www.indeed.com/trendgraph/jobgraph.png?q=haskell%2C+clojure%2C+erlang%2C+scala" border="0" alt="haskell, clojure, erlang, scala Job Trends graph" width="420" height="250" />
+</a>
+<table style="font-size:80%" border="0" cellspacing="0" cellpadding="6" width="100%">
+<tbody>
+<tr>
+<td><a href="http://www.indeed.com/jobtrends?q=haskell%2C+clojure%2C+erlang%2C+scala">haskell, clojure, erlang, scala Job Trends</a></td>
+<td align="right"><a href="http://www.indeed.com/q-haskell-jobs.html">haskell</a> - <a href="http://www.indeed.com/q-clojure-jobs.html">clojure</a> - <a href="http://www.indeed.com/q-erlang-jobs.html">erlang</a> - <a href="http://www.indeed.com/q-scala-jobs.html">scala</a></td>
+</tr>
+</tbody></table>
+</div>
+<ul>
+	<li>Use clojure-textflow to create ascii sequence diagrams.. this looks neat, I'll probably install clojure for it. (<a href="http://code.google.com/p/clojure-textflow/">here</a>, via @tranqy)</li>
+</ul>
+[clj]
+(flow [Alice Bob Tzach]
+  [[mmm Tzach Bob]
+  [xxx Bob Alice]
+  []
+  [zzz Alice Tzach]])
+[/clj]
+
+... gets you ...
+
+[clj]
+Alice                Bob                Tzach
+ |                   |         mmm       |
+ |                   |&lt;------------------|
+ |         xxx       |                   |
+ |&lt;------------------|                   |
+ |                   |                   |
+ |         zzz       |                   |
+ |--------------------------------------&gt;|
+[/clj]
+<ul>
+	<li>Thoughts on persistent data structures and Clojure's transients (<a href="http://technomancy.us/132">here</a>, by @technomancy) -- Phil Hagelberg warns about the perils of thinking of the new Transient data structures as a way of getting imperative style data structures into Clojure.</li>
+</ul>
+Also, I just found these two awesome videos (thanks Google Alerts!) about some of the new features in 1.1. The videos are from Sean Devlin and they can be found at vimeo.com. One is about the use of <a href="http://vimeo.com/8339003">Transients</a> and the other is about <a href="http://vimeo.com/8320428">Futures and Promises</a>. Sean is also the author of the quasi-homonymous blog <a href="http://fulldisclojure.blogspot.com/">Full Disclojure</a> (<a href="http://fulldisclojure.blogspot.com/">http://fulldisclojure.blogspot.com</a>)
+
+I embedded these videos here for your viewing pleasure, although you probably will want to go to vimeo.com to watch them in full resolution:
+<p style="text-align: center;">[vimeo 8320428]</p>
+<p style="text-align: center;">[vimeo 8339003]</p>

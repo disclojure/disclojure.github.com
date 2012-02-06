@@ -1,0 +1,22 @@
+---
+layout: legacy-post
+title: Clojure 1.1.0 rc1 released!
+wordpress_id: 423
+wordpress_url: http://disclojure.org/?p=423
+date: 2009-12-17 14:28:13.000000000 -08:00
+---
+Today Clojure version 1.1.0-rc1 has been released. It was released quickly after rc0. I have not found an online version of the release notes, so <a href="http://disclojure.org/documents/clojure-1-1-0-rc1-release-notes/">I am publishing them on this site</a>.
+
+This is an important achievement, one that provides a number of performance improvements and lays the foundation to many more improvements to come.
+
+These are the some of most substantial feature additions in 1.1.0:
+<ul>
+	<li><a href="http://clojure.org/transients">Transients</a>: Allows persistent data structures to become mutable temporarily, in a way that is transparent to the rest of the application and that is also thread safe. This alone can provide big performance gains on large data structures.</li>
+	<li>Chunked Seqs: Allows to process data sequentially by small blocks, called 'chunks'. This reduces the overhead of accessing the elements one by one.</li>
+	<li>Futures: Futures represent asynchronous computations. They are away to get code to run in another thread, and obtain the result.</li>
+	<li>Promises: A promise is a synchronization construct that can be used to deliver a value from one thread to another. Until the value has been delivered, any attempt to dereference the promise will block.</li>
+	<li>clojure.test: the former clojure.contrib.test-is is now part of clojure. There is also JUnit compatible reporting.</li>
+</ul>
+You can download the new release candidate here: <a href="http://clojure.googlecode.com/files/clojure-1.1.0-rc1.zip">http://clojure.googlecode.com/files/clojure-1.1.0-rc1.zip</a> and you can read a copy of the release notes <a href="http://disclojure.org/documents/clojure-1-1-0-rc1-release-notes/">here</a>.
+
+Congratulations to all those involved in this exciting release!

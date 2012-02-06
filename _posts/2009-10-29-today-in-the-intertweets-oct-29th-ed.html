@@ -1,0 +1,30 @@
+---
+layout: legacy-post
+title: Today in the Intertweets (Oct 29th Ed.)
+wordpress_id: 228
+wordpress_url: http://disclojure.org/?p=228
+date: 2009-10-29 20:13:26.000000000 -07:00
+---
+<ul>
+	<li>*Lazy* tail-recursive QSort in #Clojure from Chouser. Beautiful (via @fogus)
+[clj](take 3
+     ((fn [x]
+          (qsort (take x (repeatedly #(rand-int x)))))
+          100)))[/clj]
+</li>
+	<li>flightcaster, runa.com, incanter: It seems clojure's sweet spot is analytics! what accounts for this? (via @silkodyssey)
+<ul>
+	<li>dynamic functional langs are well suited to analytics plus Clojure's access to java libs (via @liebke, Incanter)</li>
+	<li>one big reason is the functional aspect of Clojure - analytics is lots of math - the second is macros (for DSLs) (via @amitrathore, runa.com)</li>
+</ul>
+</li>
+</ul>
+<!--more-->
+<ul>
+	<li>Loaded Spring context into Clojure. Now have entire application and context at my fingertips via the REPL (via @JulienChastang) -- that is an interesting use of clojure... how did you do that?</li>
+	<li>OSGi + Clojure is awkward. @<a style="text-decoration: none; color: #0000ff; padding: 0px; margin: 0px;" href="http://twitter.com/romanroe">romanroe</a> is doing good work in this area, see <a href="http://github.com/romanroe/ogee">here</a> (via @njbattlett)</li>
+	<li>Observations from a real-world Clojure project (<a href="http://groups.google.com/group/clojure/browse_thread/thread/ffcd4bc722852b4?hl=en&amp;pli=1">here</a>, via @dewitt) -- a very interesting read, wether you're programming clojure or thinking about doing it. 4) is particularly relevant</li>
+	<li>Building a Google Wave robot in Clojure (<a href="http://writequit.org/blog/?p=323">here</a>, via @thnetos)</li>
+	<li>Before you complain about Clojure being slow, read <a href="http://groups.google.com/group/clojure/msg/cccf532ca04fcdf4?dmode=source">this</a> (via @hackerlinks)</li>
+</ul>
+<ul></ul>

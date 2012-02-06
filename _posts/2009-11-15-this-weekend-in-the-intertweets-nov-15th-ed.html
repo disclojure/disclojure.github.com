@@ -1,0 +1,29 @@
+---
+layout: legacy-post
+title: This weekend in the Intertweets (Nov 15th Ed.)
+wordpress_id: 273
+wordpress_url: http://disclojure.org/?p=273
+date: 2009-11-15 23:07:25.000000000 -08:00
+---
+<ul>
+	<li>Rich Hickey on reasons behind deftype/protocol in #clojure (<a href="http://groups.google.com/group/clojure/msg/330c230e8dc857a9">here</a>, via @wmacgyver) -- Rich Hickey explains a the rationale behind some design decisions for the new features of #clojure, and also provides hints on when to use them and when use the current existing alternatives (reify vs. proxy, deftype vs. defstruct, deftype vs. gen-class). There is also a discussion about why 'protocols' is a better option than Java's class/interface inheritance and partial implementation, at least for #clojure.
+<ul>
+	<li>... and if you want to see how the use of protocols looks like, <a href="http://paste.lisp.org/display/90329">here is an example</a> (via @stuartsierra)</li>
+</ul>
+</li>
+	<li>Final mini blog on poker and #clojure (<a href="http://blogs.foognostic.net/2009/11/more-poker-with-clojure-whats-in-a-hand/">here</a>, via @s_e_t_h) -- this is a followup of a<a href="http://disclojure.org/2009/11/09/today-in-the-intertweets-nov-9th-ed/"> previous article</a> that we referenced a few days ago. The code ca<a href="http://bitbucket.org/seths/pokerepl/src/">n now be found in bitbucket</a></li>
+	<li>Clojure tutorial: fetching web comics (<a href="http://gnuvince.wordpress.com/2008/10/31/fetching-web-comics-with-clojure-part-1/">here</a>, via @antest) -- Yet another introductory tutorial to Clojure.</li>
+	<li>#leiningen, "A build tool for Clojure designed to not set your hair on fire" (<a href="http://github.com/technomancy/leiningen">here</a>, via @pholdings) -- By @technomancy, a tool to describe and build your clojure projects in clojure (wraps maven and ant). Here is an example of a project definition:
+[clj](defproject leiningen &quot;0.5.0-SNAPSHOT&quot;
+  :dependencies [
+      [org.clojure/clojure &quot;1.1.0-alpha-SNAPSHOT&quot;]
+      [org.clojure/clojure-contrib &quot;1.0-SNAPSHOT&quot;]
+      [ant/ant-launcher &quot;1.6.2&quot;]
+      [org.apache.maven/maven-ant-tasks &quot;2.0.10&quot;]]
+  :dev-dependencies [
+      [org.clojure/swank-clojure &quot;1.0&quot;]])[/clj]
+and here an example of a build command:
+[bash]$ lein repl # launch a REPL with the project classpath configured[/bash]</li>
+<li>Clojure and Android with Emacs on Ubuntu (<a href="http://riddell.us/tutorial/clojure_android/clojure_android.html">here</a>, via @elight)</li>
+<li>Swank-clojure 1.0 and dependencies made it into elpa! Should make installation much easier now (via @technomancy) -- Yay!!! </li>
+</ul>

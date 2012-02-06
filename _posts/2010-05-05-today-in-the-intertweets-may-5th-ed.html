@@ -1,0 +1,14 @@
+---
+layout: legacy-post
+title: Today in the Intertweets (May 5th Ed)
+wordpress_id: 877
+wordpress_url: http://disclojure.org/?p=877
+date: 2010-05-05 23:48:39.000000000 -07:00
+---
+<ul>
+	<li>Clojure Notes (intro tutorial) (<a href="http://clojure-notes.rubylearning.org/">here</a>, via @jneira) -- These are the notes used in the <a href="http://rubylearning.com/blog/2010/03/09/clojure-101-a-new-course/">Clojure 101 </a>course at <a href="http://rubylearning.com">RubyLearning.org</a></li>
+	<li>Circuit Breaker: a small but real-life example of #Clojure protocols and datatype (<a href="http://blog.higher-order.net/2010/05/05/circuitbreaker-clojure-1-2/">here</a>, via @hircus) -- A circuit breaker is a system that is placed where a system integrates with a second system. When the second system becomes unstable it creates threading issues on the calling system. The circuit breaker prevents these issues by 'shortcuting' the calls on the first system once it has detected that the second system is not responding. This is an implementation of such system in Clojure 1.2 using protocols and datatypes. This article is a good one if you want to familiarize yourself with some of the new features of the upcoming 1.2 version of Clojure.</li>
+	<li>Last Var Wins in #Clojure (<a href="http://groups.google.com/group/clojure/browse_thread/thread/2c7de76c3561bdf0">here</a>, via @fogus) -- In short, if you define the same variable in two different libraries, this will cause an error in code that imports them both. This can be fixed by tweaking the imports to exclude one version or the other. But this also make life very miserable for all library maintainers, since they might move a function from one library (e.g. clojure-contrib) to another (clojure.core) and now most of the code that uses both will break. A solution is proposed to make this re-definition of a function to be a "warning" instead of a right-out "error". Chime in with your opinion.</li>
+	<li>Latest jclouds release supports #clojure and advanced #cloud provisioning (<a href="http://anyweight.blogspot.com/2010/05/new-jclouds-hardens-cloud-provisioning.html">here</a>, via @jclouds) -- jclouds is a framework that abstracts all operations on cloud infrastructures. It supports many (all?) different cloud systems. Now jclouds can be used in the REPL via clojure. Work in progress (beta 5)</li>
+	<li>Communicating with a GUI from #clojure (<a href="http://kotka.de/blog/2010/05/Decoupling_Logic_and_GUI.html">here</a>, via @kotarak) -- How to separate the User Interface from the Business Logic in clojure.</li>
+</ul>

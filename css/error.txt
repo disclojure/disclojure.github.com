@@ -1,0 +1,4 @@
+A less error occured trying to build your bundle. Please paste the error below in an issue for us at http://github.com/twitter/bootsrap! thanks!
+
+
+{"type":"undefined_method","message":"error evaluating function `lighten`: Object #<Object> has no method 'toHSL'","filename":"bootstrap.css","index":43060,"line":1637,"column":22,"extract":["  .active {","    background-color: lighten(@green, 30);","    border-color: @green;"]}

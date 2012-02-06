@@ -1,0 +1,17 @@
+---
+layout: legacy-post
+title: Today in the Intertweets (June 9th Ed)
+wordpress_id: 950
+wordpress_url: http://disclojure.org/?p=950
+date: 2010-06-09 23:06:56.000000000 -07:00
+---
+<ul>
+	<li>Interesting fact: people have talked with me more about clojure than about ruby or rails at #railsconf (via @redinger) -- more on this later...</li>
+	<li>clojure.rb (<a href="http://blog.fogus.me/2010/06/09/clojure-rb/">here</a>, via @fogus) -- Michael Fogus highlights one of the interesting aspect of Chas Emerick's survey on the <a href="http://muckandbrass.com/web/display/~cemerick/2010/06/07/Results+from+the+State+of+Clojure,+Summer+2010+Survey">State of Clojure</a>; the fact that there are a lot of Clojurians that are also (mainly) Rubyists, and wonders if the reason for that is that Ruby, with some of it's more lispy features, has become a gateway drug to Lisp for people coming from the imperative world.
+<ul>
+	<li>Clojure, from a Ruby perspective (<a href="http://briancarper.net/blog/clojure-from-a-ruby-perspective?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=Feed%3A+clojure+%28Planet+Clojure%29&amp;utm_content=Google+Feedfetcher">here</a>, via @stantont) -- So on the same Rubyist-turned-Clojurian topic, and as a follow-up on @fogus' article above, Brian Carper writes about his experience in using Clojure after having been a long-time Rubyist. The article highlights where things are equivalent and where one of the languages has an edge over the other. Interesting read if you're coming from Ruby.</li>
+</ul>
+</li>
+	<li>Using the App Engine Users API from Clojure (<a href="http://compojureongae.posterous.com/using-the-app-engine-users-api-from-clojure">here</a>, via @cdberg) -- Another post in this Compojure on GAE series. This one covers managing authentication and authorization via GAE's Users API. It also includes tips on how test locally.</li>
+	<li>Medusa 0.1 - a supervised thread-pool for Clojure futures (<a href="http://s-expressions.com/2010/06/08/medusa-0-1-a-supervised-thread-pool-for-clojure-futures-2/">here</a>, via @amitrathore) -- This is a thread pool for IO operations that might take a long time to complete and for which the operation requests might come in spikes. Clojure would, by default, use an unbounded thread pool for each operation if you're using Agents or Futures. Medusa provides an abstraction similar to Futures but with a bounded thread pool and also with an eviction policy for operations that are taking too long to complete.</li>
+</ul>

@@ -1,0 +1,13 @@
+---
+layout: legacy-post
+title: Today in the Intertweets (August 3rd Ed)
+wordpress_id: 1073
+wordpress_url: http://disclojure.org/?p=1073
+date: 2010-08-03 23:30:35.000000000 -07:00
+---
+<ul>
+	<li>Enhancing Clojure's case to evaluate dispatch values (<a href="http://cemerick.com/2010/08/03/enhancing-clojures-case-to-evaluate-dispatch-values/">here</a>, via @cemerick) -- Clojure's 'case' statement is a very fast switch on any compile-time literal. Very fast but with the downside that doesn't evaluate the dispatch values at runtime, and this prevents to use Java variables as dispatch values, even if they're static and final, or enums. Chas Emerick provides an enhanced case: 'case+' that handles said java values, still at compile time.</li>
+	<li>The latest in a series of micro-interviews focused on #Clojure: (take 5 (brenton-ashworth)) (<a href="http://blog.fogus.me/2010/08/03/take-5-brenton-ashworth/">here</a>, via @fogus) -- An interview to the author of <a href="http://github.com/brentonashworth/deview">deview</a>, <a href="http://github.com/brentonashworth/sandbar">sandbar</a> and other goodies.</li>
+	<li>Clojure simple threaded web server performance test (<a href="http://will.groppe.us/post/899492559/clojure-simple-threaded-web-server-performance-test">here</a>, via @wilig) -- This is a test of Clojure/compojure on jetty pulling data from a Postgres database. It turns out using a medium-sized connection pool gets the optimum performance.</li>
+	<li>Created a Scala RFE to replace the existing immutable.Vector implementation with my port from Clojure (<a href="https://lampsvn.epfl.ch/trac/scala/ticket/3724">here</a>, via @djsipevak) -- More cross-pollination between Clojure and Scala, or should I just say 'pollination'? I am not aware of anything flowing from Scala to Clojure. Any tips on those?</li>
+</ul>

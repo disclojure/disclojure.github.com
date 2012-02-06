@@ -1,0 +1,21 @@
+---
+layout: legacy-post
+title: Time is the new Memory
+excerpt: If you managed to download the slides of the Keynote that Rick Hickey gave
+  at the JVM Language Summit you will find this interview with Rich at Artima.com
+  to be a good companion to those slides.
+wordpress_id: 54
+wordpress_url: http://disclojure.org/?p=54
+date: 2009-09-21 21:29:17.000000000 -07:00
+---
+If you managed to download the slides of the Keynote that Rick Hickey gave at the<a href="http://disclojure.org/2009/09/18/rich-hickey-speaks-about-the-future-of-clojure/"> JVM Language Summit</a> you will find <a href="http://bit.ly/3wmgRs">this interview with Rich</a> at Artima.com to be a good companion to those slides.
+
+Rich discusses how the time aspect of software execution has been left out of the most common programming languages and how nowadays it is up to the developer to guarantee that the multi-threaded execution of the code always yields correct results. But today, when a thread of execution 'sees' the system state, it does not necessarily see it in a time-consistent manner; it sees the state in a constant flux in which objects can mutate  while being observed or between observations (i.e. look at an object, make a decision, look again, the object has mutated). Developers currently must resort to the use the thread locking features available in most modern languages to make sure each thread's view of state is somewhat consistent, but this solution is not comprehensive, very error prone and hard to reason about. Time is not explicit in those languages, it's only implicit.
+
+Later he proposes that the use of persistent data structures with certain time constructs (STM, agents and atoms) creates an environment in which the observation of the state by every thread is time-consistent. No execution threads will see any of the values that it is relying on change independently, and when they do change, the thread will know it is reading values that might have mutated.
+
+As CPUs are gaining more and more cores, the aspects of time and time-consistent state will become more and more relevant and key to producing applications that leverage all this new power. In the same way Garbage Collection removes memory management from the list of the developer's responsibilities and thus making GB'd software more reliable, Clojure removes the complexity of making many threads of execution work concurrently without sabotaging each other.
+
+Interesting read nevertheless.
+
+<a href="http://bit.ly/3wmgRs">"Time is the new Memory"</a>

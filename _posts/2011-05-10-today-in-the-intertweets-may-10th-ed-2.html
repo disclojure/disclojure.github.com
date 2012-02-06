@@ -1,0 +1,12 @@
+---
+layout: legacy-post
+title: Today in the Intertweets (May 10th Ed)
+wordpress_id: 1702
+wordpress_url: http://disclojure.org/?p=1702
+date: 2011-05-10 22:18:04.000000000 -07:00
+---
+<ul>
+	<li>Classpath trickery for using clojure-hbase with leiningen (thanks @clizzin !) (<a href="http://binarysolo.posterous.com/using-roberthooke-to-alter-the-classpath-of-a">here</a>, via @davidandrzej) -- You can alter the classpath used by leiningen to run your code by using <a href="https://github.com/technomancy/robert-hooke">robert hooke</a>, a library that lets you extend existing functions. Then you can setup a hook in leiningen that will be executed when leiningen calls it's own get-classpath function. When this function is called by leiningen, your hook will be executed too. Or something along these lines...</li>
+	<li>More Clojure for Spring Surf (<a href="http://www.skuro.tk/2011/05/10/more-clojure-for-spring-surf/">here</a>, via @skuro) -- Spring Surf is a View Composition Framework for Spring MVC. If you know spring you know what I am talking about. If you don't know spring, suffice to say it is a framework within a framework of a framework, all dependency injected. Aaaanyway, this article is about <a href="https://github.com/skuro/spring-webscripts-addon-clojure">spring-webscripts-addon-clojure</a>, a library that lets you create scripts for Spring Surf in Clojure.</li>
+	<li>Parsing Web Pages with Clojure and enlive. (<a href="http://rob-rowe.blogspot.com/2011/05/parsing-web-pages-with-clojure-and.html">here</a>, via @rippinrobr) -- A friendly reminder that <a href="https://github.com/cgrand/enlive">Enlive</a> can be used for the reverse of generating web pages, which is parsing them.</li>
+</ul>

@@ -1,0 +1,29 @@
+---
+layout: legacy-post
+title: This weekend in the Intertweets (April 4th Ed)
+wordpress_id: 790
+wordpress_url: http://disclojure.org/?p=790
+date: 2010-04-04 22:05:54.000000000 -07:00
+---
+<ul>
+	<li>Clojure Ireland set up (<a href="http://groups.google.com/group/clojure-ireland">here</a>, via @clojureireland) -- Welcome!</li>
+	<li>I wonder if there is interest in european Clojure training sessions (via @cgrand)
+<ul>
+	<li>@cgrand Funny I'd been pondering the very same thing (via @LauJensen) -- so the answer to @cgrand's question is 'yes'?</li>
+</ul>
+</li>
+	<li>Latent Semantic Analysis using #solr #clojure (<a href="http://www.ccri.com/blog">here</a>, via @algoriffic) -- Clever search algorithms build on Clojure.</li>
+	<li>Better doc for #clojure lazytest, how's the new syntax? (<a href="http://github.com/stuartsierra/lazytest">here</a>, via @stuartsierra) -- The LazyTest library from @stuartsierra is an attempt to build a new testing framework after the lessons learned from writing clojure.test.</li>
+	<li>Simple #clojure xmpp library (<a href="http://github.com/zkim/xmpp-clj">here</a>, from @napple) -- So if always wanted to write a smart Jabber robot to infiltrate the clojure chat, this is your chance!</li>
+	<li>new cloud demo: #clojure in google #appengine by @hugoduncan (<a href="http://github.com/cloudhackers/clouddemo">here</a>, via @cloudhackers) -- From the source code it seems like this is a simple web app built on with <a href="http://github.com/cgrand/moustache">Moustache</a> on top of <a href="http://github.com/mmcgrana/ring">Ring</a> and deployable on Google App Engine,  but the maven pom.xml file alone is a work of art ... is all that stuff really used though?</li>
+	<li>Clojure: Immutability at the Language Level (<a href="http://www.developer.com/java/article.php/3874551/article.htm">here</a>, via @developerCom) -- This is a fairly large excerpt of the book "<a href="http://www.manning.com/fogus/">The Joy of Clojure</a>." If you haven't bought the alpha version of the book yet (a.k.a. MEAP) then reading this article should convince you to go ahead and purchase it.</li>
+	<li>(import '(twitter4j TwitterFactory))(map #(str (. % getText)) (.. (TwitterFactory.)(getInstance "user" "pass") getFriendsTimeline)) (via @asakawajunya) -- So this is a meta-tweet that is possible probably only in Clojure. It is a tweet, but it is also a program, but it is also a twitter client, in a tweet, that is also a program. Clojure can be terse sometimes.  This gets the timeline of posts of the people you follow on twitter.
+<ul>
+	<li>(import '(twitter4j TwitterFactory Query))(map #(str (. % getText))(. (.. (TwitterFactory.) getInstance (search(Query."Clojure")))getTweets)) (via @asakawajunya) -- this is a search of the latest tweets that have the word 'clojure' in them. Clojure, the only true programming language for twitter.</li>
+</ul>
+</li>
+	<li>New release of scriptjure out! (<a href="http://github.com/arohner/scriptjure">here</a>, via @arohner) -- Scriptjure lets you programatically generate JavaScript from clojure.</li>
+	<li>Clojure performance tips (<a href="http://gnuvince.wordpress.com/2009/05/11/clojure-performance-tips/?utm_source=twitterfeed&amp;utm_medium=twitter">here</a>, via @newstokyojp) -- Good tips on how to optimize your clojure code for performance.</li>
+	<li>clj-html deprecated in favor of hiccup from #compojure (<a href="http://github.com/mmcgrana/clj-html">here</a>, via @wmacgyver) -- hiccup and clj-html shared the same interface, but it was a duplicated effort and also hiccup seemed to have a performance edge over clj-html.</li>
+	<li>Adventurous, vimming Clojurians: Please help test #vimclojure for better #clojure experience (<a href="http://groups.google.com/group/vimclojure/browse_thread/thread/d15b0174d2a1e51">here</a>, via @kotarak) -- More robust communication with Clojure, saner defaults, all yours today if you dare to give it a try!</li>
+</ul>
