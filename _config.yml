@@ -1,5 +1,5 @@
 # Jekyll
-permalink: /:categories/:title/
+permalink: /:year/:month/:day/:title
 exclude: [release.sh]
 name: Disclojure, Public Disclosure of All Things Clojure
 pygments: false
