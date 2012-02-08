@@ -2,7 +2,6 @@
   <url>
     <loc>http://{{ site.domain }}{{ page.url }}</loc>
     {% if page.last_updated %} <lastmod>{{ page.last_updated | date: "%Y-%m-%d" }}</lastmod> {% elsif page.date %} <lastmod>{{ page.date | date: "%Y-%m-%d" }}</lastmod> {% else %} <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod> {% endif %}
-    <n>{{forloop.index}}</n>
     {% capture priority %} {% if forloop.index == 1 %}1{% else %} {% if forloop.index < 10 %} 0.9 {% else %} {% if forloop.index < 30 %} 0.8 {% else %} {% if forloop.index < 60 %} 0.7 {% else %} {% if forloop.index < 100 %} 0.6 {% else %} {% if forloop.index < 200 %} 0.5 {% else %} {% if forloop.index < 300 %} 0.4 {% else %} {% if forloop.index < 400 %} 0.3 {% else %} {% if forloop.index < 500 %} 0.2 {% else %} {% if forloop.index < 600 %} 0.1 {% else %} 0 {% endif %} {% endif %} {% endif %} {% endif %} {% endif %} {% endif %} {% endif %} {% endif %} {% endif %} {% endif %} {% endcapture %}
     <priority>{{priority}}</priority>
     <changefreq>weekly</changefreq>

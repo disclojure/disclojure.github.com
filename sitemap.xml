@@ -21,7 +21,7 @@ layout: nil
   {% for page in site.html_pages %}
   {% unless page.noindex %}
   <url>
-    <loc>http://{{ site.domain }}/{{ page.url }}</loc>
+    <loc>http://{{ site.domain }}{{ page.url }}</loc>
     {% if page.last_updated %}
     <lastmod>{{ page.last_updated | date: "%Y-%m-%d" }}</lastmod>
     {% elsif page.date %}
