@@ -50,7 +50,7 @@ a {
     font-size: 20px;
     font-family: 'IM Fell English', serif;
     font-weight: normal;
-   padding: 0px 20px 0px; 
+    padding: 0px 20px 0px; 
 }
 
 .navbar .nav {
@@ -78,4 +78,18 @@ body {
     padding-bottom: 5px;
     padding-top: 35px;
     border-bottom: 0px;
+}
+
+@media (max-width: 480px){
+    h1,
+    h2,
+    h3,
+    p,
+    li {
+        font-size: 80%;
+    }
+    .page-header {
+        padding-top: 0px;
+        margin-top: 0px;
+    }
 }
