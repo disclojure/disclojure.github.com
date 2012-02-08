@@ -10,11 +10,11 @@ html, body {
     min-height: 100%;
     height: auto !important;
     height: 100%;
-    margin: 0 auto -5.5em; /* added 2.5 to account for the 4px of the topbar */
+    margin: 0 auto -5em; /* added 2.5 to account for the 4px of the topbar */
 }
 .footer, .push {
-    clear: both;
-    height: 3em;
+/*    clear: both;
+*/    height: 3em;
     margin-top: 1em;
 }
 
@@ -81,15 +81,25 @@ body {
 }
 
 @media (max-width: 480px){
-    h1,
-    h2,
-    h3,
+    h1 {
+        font-size: 18px;
+        line-height: 20px;
+    }
+    h2 {
+        font-size: 16px;
+        line-height: 20px;
+    }
     p,
-    li {
-        font-size: 80%;
+    li,
+    dl,dt,dd{
+        font-size: 12px;
+        line-height: 18px;
     }
     .page-header {
         padding-top: 0px;
         margin-top: 0px;
+    }
+    .nav li {
+        font-size: 20px;
     }
 }

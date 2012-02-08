@@ -1,0 +1,41 @@
+---
+layout: nil
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="0.92">
+  <channel>
+    <title>{{ site.name }}</title>
+    <link>http://{{ site.domain }}</link>
+    <description>{{ site.description }}</description>
+    <pubDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+    <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</lastBuildDate>
+    <docs>http://backend.userland.com/rss092</docs>
+    <language>en</language>
+    
+    {% for post in site.posts limit: 30 %}
+    <item>
+      <title>{{ post.title }}</title>
+      <link>http://{{site.domain}}{{ post.url }}</link>
+      <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+      <author>{{ post.author }}</author>
+      <guid>http://{{site.domain}}{{ post.id }}</guid>
+      <description>
+        {% if post.layout == 'legacy-post' %}
+        {{ post.content | xml_escape }}
+        {% else %}
+          {% capture content %}
+          {{ post.content }}
+        <ul>
+          {% for it in post.intertweets %}
+          <li><a href="{{it.url}}">{{ it.tweet }}</a> 
+            (via <a href="http://twitter.com/{{it.author}}">@{{it.author}}</a>)
+            -- {{it.comment | markdownify }}</li>
+          {% endfor %}
+        </ul>
+          {% endcapture %}
+          {{ content | xml_escape }}
+        {% endif %}</description>
+    </item>
+    {% endfor %}
+  </channel> 
+</rss>

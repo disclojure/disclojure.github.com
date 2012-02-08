@@ -1,23 +1,13 @@
 <div class="content">
   <div class="page-header">
     {% if post.title %}
-      {% assign title = {{post.title}} %}
-    {% else %}
-      {% assign title = 'Today in the Intertweets' %}
-    {% endif %}
       <h1 class="title">
-        <a href="{{post.url}}" title="{{post.title}} &mdash; {{post.date | date: "%b %d"}}">
-          {{post.title}}  &mdash; {{post.date | date: "%b %d"}}</a></h1>
+        <a href="{{post.url}}" title="{{post.title}}">
+          {{post.title}}</a></h1>
+    {% endif %}
   </div>
   <div class="post_content">
     {{ post.content }}
-    <dl>
-      {% for it in post.intertweets %}
-      <dt><a href="{{it.url}}">{{ it.tweet }}</a> 
-        (via <a href="http://twitter.com/{{it.author}}">@{{it.author}}</a>)</dt>
-      <dd>{{it.comment | markdownify }}</dd>
-      {% endfor %}
-    </dl>
   </div>
   <div id="social-toggle">
       <a class="dsq-comment-count comment-link commentslink"

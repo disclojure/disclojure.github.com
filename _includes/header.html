@@ -3,9 +3,19 @@ Assign atom = true if this is an index page that has a corresponding atom page
 {% endcomment %}
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1.0"/>
-
-  <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.name }}</title>
+  <!-- make small devices show the site without zooming out -->
+  <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=2.0"/>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>
+       {% if page.title %}
+          {% if post.layout == post %}
+             {{ page.title }}, {{ page.date | date: "%b %d"}} &mdash;
+          {% else %}
+             {{ page.title }} &mdash; 
+          {% endif %}
+       {% endif %}
+       {{ site.name }}
+  </title>
   <link rel="stylesheet" type="text/css" 
         href="{{ site.baseurl }}/css/bootstrap.min.css">
       <style type="text/css">
