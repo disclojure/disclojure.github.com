@@ -10,7 +10,11 @@
       <div class="container">
         <div class="row">
           <div class="span8 offset2">
+            {% if post.layout == 'legacy-post' %}
+            {% include legacy-post.html %}
+            {% else %}
             {% include post.html %}
+            {% endif %}
           </div>
         </div>
       </div>

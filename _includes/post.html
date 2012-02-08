@@ -10,7 +10,7 @@
           {{post.title}}  &mdash; {{post.date | date: "%b %d"}}</a></h1>
   </div>
   <div class="post_content">
-    {{ post.content }}
+    {{ post.content | markdownify}}
     <dl>
       {% for it in post.intertweets %}
       <dt><a href="{{it.url}}">{{ it.tweet }}</a> 
