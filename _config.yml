@@ -1,10 +1,31 @@
 # Jekyll
 permalink: /:categories/:title/
 exclude: [release.sh]
-name: Disclojure, 
-pygments: true
+name: Disclojure, Public Disclosure of All Things Clojure
+pygments: false
 domain: disclojure.org
-description: <todo>
+description: Every day, a summary of all the tweets that mention
+   Clojure, handpicked by a human being.
 paginate: 10
 google-analytics-id: UA-10728886-1
-
+navigation:
+- text: home
+  active: true
+  url: /
+  sections: [home]
+- text: latest
+  active: true
+  url: /latest
+  sections: [latest]
+- text: archive
+  active: true
+  url: /archive
+  sections: [archive]
+- text: follow
+  active: true
+  url: https://twitter.com/intent/user?original_referer=http%3A%2F%2Fdislcojure.org&amp;region=follow&amp;screen_name=disclojure&amp;source=followbutton&amp;variant=2.0
+  sections: []
+- text: subscribe
+  active: true
+  url: http://feeds.feedburner.com/disclojure
+  sections: []
