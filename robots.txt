@@ -1,0 +1,5 @@
+User-agent: *
+Disallow:
+
+Sitemap: http://disclojure.org/sitemap.xml
+
