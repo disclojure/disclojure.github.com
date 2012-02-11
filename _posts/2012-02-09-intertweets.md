@@ -23,7 +23,7 @@ intertweets:
  tweet: Rich Hickey swore me to secrecy today about what he's been
   working on and will discuss at Clojure/West. It's big. 
  author: Clojure/West
- url: http://http://regonline.com/clojurewest2012
+ url: http://regonline.com/clojurewest2012
  comment: >
   Should we make a poll like we did for the ClojureScript
   announcement? OK, I'll start: ClojureBasic. Yeah, I think I'll win this time.  
