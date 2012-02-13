@@ -50,7 +50,7 @@ intertweets:
  url:
   http://corfield.org/blog/post.cfm/getting-started-with-clojurescript-and-jquery-and-fw-1
  comment: >
-  This aritcle is about using [JQuery](http://jquery.com) with
+  This article is about using [JQuery](http://jquery.com) with
   ClojureScript in the context of the
   [FW/1](https://github.com/seancorfield/fw1-clj) framework. All done
   via the new [jayq](https://github.com/ibdknox/jayq) library
