@@ -7,20 +7,16 @@ priority: 1
 ---
 <!doctype html>
 <html lang="en">
-  {% include header.html %}
-  
+  {% include header.html %}  
   <body>
     {% include navbar.html %}
-    {% comment %} "wrapper" is needed for sticky footnote {% endcomment %}
-    <div class="container wrapper">
+    <div class="container">
       {% comment %}
       <section id="banner">
         {% include banner-main.html %}
       </section>
-      {% endcomment %}      
-      
+      {% endcomment %}          
       {% assign post = site.posts.first %} 
-      
       <div class="row">
         <div class="span8 offset2">
           {% if post.layout == 'legacy-post' %}
@@ -34,11 +30,10 @@ priority: 1
       <div class="row archive-link">
         <div class="span8 offset2">
           <h2><a href="/latest" title="Latest Intertweets">
-              &larr; Older Intertweets </a></h2> </div> </div>
-      {% comment %} "push" is required for the sticky footer {% endcomment %}
-      <div class="push"></div>
+              &larr; Older Intertweets </a></h2> 
+        </div>
+      </div>
     </div>
     {% include footer.html %}
-    
   </body>
 </html>

@@ -1,0 +1,16 @@
+<div class="row list-post">
+  {% if post.layout == 'legacy-post' %}
+  <h2 class="title"><a href="{{post.url}}">{{ post.title}}</a></h2>
+  <div class="post_content span8">
+    {{ post.content }}
+  </div>
+  {% else %}
+  <h2 class="title">
+    <a href="{{post.url}}" 
+       title="{{post.title}} &mdash; {{post.date | date: "%b %d"}}">
+      {{post.title}}  &mdash; {{post.date | date: "%b %d"}}</a></h2>
+  <div class="span8">
+  {% include intertweets-list.html %}
+  </div>
+  {% endif %}
+</div> <!-- row -->

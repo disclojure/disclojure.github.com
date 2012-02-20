@@ -10,8 +10,7 @@ priority: 0.9
   {% include header.html %}
   <body>
     {% include navbar.html %}
-    {% comment %} "wrapper" is needed for sticky footnote {% endcomment %}
-    <div class="container wrapper">
+    <div class="container">
       {% comment %}
       <section id="banner">
         {% include banner-main.html %}
@@ -24,30 +23,7 @@ priority: 0.9
             <div class="page-header">
               <h1>{{ page.title }}</h1> </div>
             {% for post in site.posts limit: 10 %}
-            <div class="row">
-              {% if post.layout == 'legacy-post' %}
-              <h2 class="title"><a href="{{post.url}}">{{ post.title}}</a></h2>
-              <div class="post_content">
-                {{ post.content }}
-              </div>
-              {% else %}
-              <h2 class="title">
-                <a href="{{post.url}}" 
-                   title="{{post.title}} &mdash; {{post.date | date: "%b %d"}}">
-                  {{post.title}}  &mdash; {{post.date | date: "%b %d"}}</a></h2>
-                  <div class="post_content">
-                    {{ post.content }}
-                    <dl>
-                      {% for it in post.intertweets %}
-                      <dt><a href="{{it.url}}">{{ it.tweet }}</a> 
-                        (via <a href="http://twitter.com/{{it.author}}">
-                          @{{it.author}}</a>)</dt>
-                      <dd>{{it.comment | markdownify }}</dd>
-                      {% endfor %}
-                    </dl>
-                  </div>
-                {% endif %}
-            </div> <!-- row -->
+            {% include list-post.html  %}
             {% endfor %}
 
             <div class="row archive-link">
@@ -56,10 +32,7 @@ priority: 0.9
                 <a href="/" class="pull-right">Newest Intertweet &rarr;</a></h2></div>
           </section>
         </div>
-        {% comment %} "push" is required for the sticky footer {% endcomment %}
-        <div class="push"></div>
       </div>
-      {% include footer.html %}
-    
+      {% include footer.html %}   
   </body>
 </html>

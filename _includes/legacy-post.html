@@ -7,16 +7,7 @@
     {% endif %}
   </div>
   <div class="post_content">
-    {{ post.content }}
-  </div>
-  <div id="social-toggle">
-      <a class="dsq-comment-count comment-link commentslink"
-           href="#disqus_thread_" data-toggle="collapse"
-           data-target="#social-post">
-          Comment
-      </a>
-      <a data-toggle="collapse" data-target="#social-post">
-        / <span id="twitter-count"></span> Tweets / Share</a>
+    {{ post.content | markdownify}}
   </div>
   <div class="row">
     {% assign share-url = post.url %}
