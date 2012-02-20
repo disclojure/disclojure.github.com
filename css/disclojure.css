@@ -1,24 +1,6 @@
-/* Needed for anchor footer */
-* {
-    margin: 0;
+footer {
+    margin-top: 100px;
 }
-html, body {
-    height: 100%;
-    color: #404040;
-}
-.wrapper {
-    min-height: 100%;
-    height: auto !important;
-    height: 100%;
-    margin: 0 auto -5em; /* added 2.5 to account for the 4px of the topbar */
-}
-.footer, .push {
-/*    clear: both;
-*/    height: 3em;
-    margin-top: 1em;
-}
-
-/* ... anchored footer */
 
 #social-toggle {
     text-align: center;
@@ -62,6 +44,21 @@ body {
     padding-top: 40px; 
 } 
 */
+
+/* fix boostrap style for long titles */
+h1.title {
+    line-height: 36px;
+}
+.page-header h1 {
+    line-height: 36px;
+}
+
+h2.title {
+    line-height: 30px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
 .navbar .nav .active {
     background-color: #293F4D;
     color: #C0CDCF;
@@ -74,6 +71,7 @@ body {
 #social-post {
     padding-top: 30px;
 }
+
 .page-header{
     padding-bottom: 5px;
     padding-top: 35px;
@@ -81,6 +79,11 @@ body {
 }
 
 @media (max-width: 480px){
+    body {
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .page-header h1,
     h1 {
         font-size: 18px;
         line-height: 20px;
@@ -91,7 +94,7 @@ body {
     }
     p,
     li,
-    dl,dt,dd{
+    ul {
         font-size: 12px;
         line-height: 18px;
     }
@@ -102,4 +105,31 @@ body {
     .nav li {
         font-size: 20px;
     }
+} 
+
+
+/* proper separation between posts in lists */
+
+.list-post {
+    margin-top: 20px;
 }
+
+span.IN-widget {
+    width: 110px;
+    text-align: left;
+}
+
+div#___plusone_0{
+    width: 110px;
+}
+
+/* make paragraphs be inline */
+.post_content li p {
+    display: inline;
+}
+
+.post_content li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+ 

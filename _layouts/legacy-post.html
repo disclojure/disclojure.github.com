@@ -3,10 +3,8 @@
   {% include header.html %}
   <body>
     {% include navbar.html %}
-    {% assign post = page %}
-    
-    {% comment %} "wrapper" is needed for sticky footnote {% endcomment %}
-    <div class="post wrapper">
+    {% assign post = page %}   
+    <div class="post">
       <div class="container">
         <div class="row">
           <div class="span8 offset2">
@@ -14,10 +12,6 @@
           </div>
         </div>
       </div>
-      {% comment %} 
-      "push" is required for the sticky footer 
-      {% endcomment %}
-      <div class="push"></div>
     </div>
     {% include footer.html %}
   </body>

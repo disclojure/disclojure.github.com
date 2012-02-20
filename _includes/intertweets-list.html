@@ -1,0 +1,9 @@
+  <div class="post_content">
+    {{ post.content | markdownify}}
+    <ul>
+      {% for it in post.intertweets %}
+      <li><a href="{{it.url}}">{{ it.tweet }}</a> 
+        (via <a href="http://twitter.com/{{it.author}}">@{{it.author}}</a>) &mdash; {{it.comment | markdownify }}</li>
+      {% endfor %}
+    </ul>
+  </div>
