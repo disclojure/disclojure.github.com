@@ -59,7 +59,7 @@ intertweets:
   is going to announce something at
   [Clojure/West](http://clojurewest.org) in less than 3 weeks, and now
   he drops this bomb. People quickly found [this](http://datomic.com),
-  and later @da5ids did some research and [look at what he
+  and later [@da5ids](http://twitter.com/da5ids) did some research and [look at what he
   found!](https://skitch.com/tbatchelli/8fm34/http-tess2.uspto.gov-bin-showfield-f-docandstate-4010-ckutar.2.1).
   So now we have reasons to believe that "datomic" is some online
   database as a service.
