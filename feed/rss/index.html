@@ -15,7 +15,7 @@ noindex: true
     
     {% for post in site.posts limit: 30 %}
     <item>
-      <title>{{ post.title | xml_escape }}</title>
+      <title>{{ post.title | markdownify }}</title>
       <link>http://{{site.domain}}{{ post.url }}</link>
       <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
       <author>{{ post.author }}</author>
@@ -25,10 +25,10 @@ noindex: true
         {{ post.content }}
         {% else %}
           {% capture content %}
-          {{ post.content | xml_escape}}
+          {{ post.content | markdownify}}
         <ul>
           {% for it in post.intertweets %}
-          <li><a href="{{it.url}}">{{ it.tweet }}</a> 
+          <li><a href="{{it.url}}">{{ it.tweet | markdownify}}</a> 
             (via <a href="http://twitter.com/{{it.author}}">@{{it.author}}</a>)
             -- {{it.comment | markdownify }}</li>
           {% endfor %}
