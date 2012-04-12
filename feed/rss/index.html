@@ -25,7 +25,7 @@ noindex: true
         {{ post.content }}
         {% else %}
           {% capture content %}
-          {{ post.content | xml_escape}}
+          {{ post.content | markdownify }}
         <ul>
           {% for it in post.intertweets %}
           <li><a href="{{it.url | xml_escape}}">{{ it.tweet | markdownify}}</a> 
@@ -34,7 +34,7 @@ noindex: true
           {% endfor %}
         </ul>
           {% endcapture %}
-          {{ content }}
+          {{ content | xml_escape }}
         {% endif %}</description>
     </item>
     {% endfor %}
