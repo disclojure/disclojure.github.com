@@ -25,7 +25,7 @@ noindex: true
         {{ post.content }}
         {% else %}
           {% capture content %}
-          {{ post.content | markdownify}}
+          {{ post.content | xml_escape}}
         <ul>
           {% for it in post.intertweets %}
           <li><a href="{{it.url | xml_escape}}">{{ it.tweet | markdownify}}</a> 
