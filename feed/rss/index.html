@@ -22,7 +22,7 @@ noindex: true
       <guid>http://{{site.domain}}{{ post.id }}</guid>
       <description>
         {% if post.layout == 'legacy-post' %}
-        {{ post.content | xml_escape }}
+        {{ post.content }}
         {% else %}
           {% capture content %}
           {{ post.content }}
@@ -34,7 +34,7 @@ noindex: true
           {% endfor %}
         </ul>
           {% endcapture %}
-          {{ content | xml_escape }}
+          {{ content }}
         {% endif %}</description>
     </item>
     {% endfor %}
