@@ -28,7 +28,7 @@ noindex: true
           {{ post.content | markdownify}}
         <ul>
           {% for it in post.intertweets %}
-          <li><a href="{{it.url}}">{{ it.tweet | markdownify}}</a> 
+          <li><a href="{{it.url | xml_escape}}">{{ it.tweet | markdownify}}</a> 
             (via <a href="http://twitter.com/{{it.author}}">@{{it.author}}</a>)
             -- {{it.comment | markdownify }}</li>
           {% endfor %}
