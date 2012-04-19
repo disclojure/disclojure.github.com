@@ -1,0 +1,43 @@
+---
+layout: nil
+noindex: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>{{ site.name }}</title>
+ <link href="http://{{ site.domain }}/feed/atom" rel="self"/>
+ <link href="http://{{ site.domain }}/"/>
+ <updated>{{ site.time | date_to_xmlschema }}</updated>
+ <id>http://{{site.name}}</id>
+ <author>
+   <name>disclojure</name>
+   <email>disclojure@gmail.com</email>
+ </author>
+
+ {% for post in site.posts %}
+ <entry>
+   <title>{{ post.title | markdownify}}</title>
+   <link href="http://{{ site.domain }}{{ post.url }}"/>
+   <updated>{{ post.date | date_to_xmlschema }}</updated>
+   <id>http://{{site.domain}}{{ post.id }}</id>
+   <content type="html">
+        {% if post.layout == 'legacy-post' %}
+          {{ post.content }}
+        {% else %}
+          {% capture content %}
+          {{ post.content | markdownify }}
+          <ul>
+          {% for it in post.intertweets %}
+          <li><a href="{{it.url | xml_escape}}">{{ it.tweet | markdownify}}</a> 
+            (via <a href="http://twitter.com/{{it.author}}">@{{it.author}}</a>)
+            -- {{it.comment | markdownify }}</li>
+          {% endfor %}
+          </ul>
+          {% endcapture %}
+          {{ content | xml_escape }}
+        {% endif %}</content>
+ </entry>
+ {% endfor %}
+ 
+</feed>
