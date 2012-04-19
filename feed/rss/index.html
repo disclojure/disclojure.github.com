@@ -22,7 +22,7 @@ noindex: true
       <guid>http://{{site.domain}}{{ post.id }}</guid>
       <description>
         {% if post.layout == 'legacy-post' %}
-        {{ post.content }}
+        {{ post.content | xml_escape }}
         {% else %}
           {% capture content %}
           {{ post.content | markdownify }}
