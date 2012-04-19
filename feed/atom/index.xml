@@ -15,7 +15,7 @@ noindex: true
    <email>disclojure@gmail.com</email>
  </author>
 
- {% for post in site.posts %}
+ {% for post in site.posts limit: 30  %}
  <entry>
    <title>{{ post.title | markdownify}}</title>
    <link href="http://{{ site.domain }}{{ post.url }}"/>
