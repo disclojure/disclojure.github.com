@@ -15,7 +15,7 @@ noindex: true
     
     {% for post in site.posts limit: 30 %}
     <item>
-      <title>{{ post.title | markdownify }}</title>
+      <title>{{ post.title }}</title>
       <link>http://{{site.domain}}{{ post.url }}</link>
       <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
       <author>{{ post.author }}</author>
